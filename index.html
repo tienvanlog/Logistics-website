@@ -1,0 +1,1092 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tiến Vanlog | Vận chuyển quốc tế</title>
+<meta name="description" content="Tiến Vanlog - Tư vấn giải pháp vận chuyển quốc tế, hỗ trợ báo giá và gửi hàng đi Mỹ, châu Âu.">
+
+<style>
+:root {
+  --red: #D62828;
+  --red-dark: #AD2020;
+  --black: #191919;
+  --gray: #F4F4F4;
+  --muted: #777777;
+  --border: #E8E8E8;
+  --white: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--black);
+  background: var(--white);
+  line-height: 1.65;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+.container {
+  width: min(1120px, 90%);
+  margin: auto;
+}
+
+/* NAVIGATION */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.96);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+}
+
+nav {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  color: var(--red);
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: -1.2px;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-links a {
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+  transition: .2s;
+}
+
+.nav-links a:hover {
+  color: var(--red);
+}
+
+.nav-cta {
+  background: var(--red);
+  color: white !important;
+  padding: 10px 17px;
+  border-radius: 5px;
+}
+
+/* HERO */
+
+.hero {
+  padding: 105px 0 80px;
+}
+
+.eyebrow {
+  color: var(--red);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 22px;
+}
+
+.hero h1 {
+  font-size: clamp(45px, 7vw, 82px);
+  line-height: 1.08;
+  letter-spacing: -3.5px;
+  font-weight: 800;
+}
+
+.red {
+  color: var(--red);
+}
+
+.hero-desc {
+  max-width: 570px;
+  margin: 25px 0 30px;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 23px;
+  background: var(--red);
+  color: white;
+  border: 1px solid var(--red);
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .25s;
+}
+
+.btn:hover {
+  background: var(--red-dark);
+  border-color: var(--red-dark);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: white;
+  color: var(--black);
+  border-color: var(--border);
+}
+
+.btn-outline:hover {
+  background: var(--gray);
+  color: var(--red);
+  border-color: var(--red);
+}
+
+.hero-visual {
+  margin-top: 75px;
+  padding: 35px;
+  background: var(--gray);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-visual::after {
+  content: "01";
+  position: absolute;
+  right: 25px;
+  bottom: -50px;
+  font-size: 180px;
+  font-weight: 900;
+  color: rgba(214,40,40,.045);
+  pointer-events: none;
+}
+
+.route {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.route strong {
+  font-size: 34px;
+  letter-spacing: -1px;
+}
+
+.route p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.route-center {
+  flex: 1;
+  text-align: center;
+  color: var(--red);
+}
+
+.route-plane {
+  font-size: 32px;
+}
+
+.route-line {
+  height: 2px;
+  background: var(--red);
+  margin: 10px 0;
+}
+
+.route-center small {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+}
+
+/* GENERAL SECTIONS */
+
+section {
+  padding: 85px 0;
+}
+
+.section-label {
+  font-size: 11px;
+  color: var(--red);
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.section-title {
+  font-size: clamp(31px, 4vw, 46px);
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+  max-width: 700px;
+  margin-bottom: 18px;
+}
+
+.section-desc {
+  max-width: 600px;
+  color: var(--muted);
+  margin-bottom: 35px;
+  font-size: 15px;
+}
+
+/* SERVICES */
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.service {
+  padding: 30px;
+  background: var(--gray);
+  border: 1px solid transparent;
+  border-radius: 8px;
+  transition: .25s;
+}
+
+.service:hover {
+  background: white;
+  border-color: var(--red);
+  transform: translateY(-4px);
+}
+
+.service-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service-number {
+  color: var(--red);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.service-icon {
+  color: var(--red);
+  font-size: 27px;
+}
+
+.service h3 {
+  font-size: 23px;
+  margin: 23px 0 8px;
+}
+
+.service p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.service-link {
+  display: inline-block;
+  color: var(--red);
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+/* BENEFITS */
+
+.benefits {
+  background: var(--gray);
+}
+
+.benefit-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px 45px;
+  margin-top: 40px;
+}
+
+.benefit {
+  display: flex;
+  gap: 20px;
+}
+
+.benefit-number {
+  color: var(--red);
+  font-size: 27px;
+  font-weight: 800;
+}
+
+.benefit h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.benefit p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* QUOTE FORM */
+
+.quote-wrap {
+  max-width: 780px;
+  background: var(--gray);
+  border-radius: 10px;
+  padding: 35px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 19px;
+  margin-top: 25px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.field.full {
+  grid-column: 1 / -1;
+}
+
+.field label {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  background: white;
+  font-size: 14px;
+  outline: none;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: var(--red);
+  box-shadow: 0 0 0 2px rgba(214,40,40,.08);
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+.form-note {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* PACKAGE INPUTS */
+
+.package {
+  background: white;
+  border: 1px solid var(--border);
+  padding: 18px;
+  border-radius: 7px;
+  margin-bottom: 12px;
+}
+
+.package-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 13px;
+}
+
+.package-title {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.remove-package {
+  border: none;
+  background: none;
+  color: var(--red);
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.dimensions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.dimensions input {
+  min-width: 0;
+  padding: 11px 8px;
+  font-size: 13px;
+}
+
+.add-btn {
+  padding: 10px 15px;
+  color: var(--red);
+  background: white;
+  border: 1px solid var(--red);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.add-btn:hover {
+  background: #fff0f0;
+}
+
+#formMessage {
+  display: none;
+  padding: 13px;
+  border-radius: 5px;
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+/* CONTACT */
+
+.contact {
+  background: var(--red);
+  color: white;
+  padding: 50px;
+  border-radius: 10px;
+}
+
+.contact .eyebrow {
+  color: white;
+}
+
+.contact h2 {
+  max-width: 650px;
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.contact p {
+  max-width: 550px;
+  margin: 15px 0 25px;
+  color: rgba(255,255,255,.85);
+}
+
+.contact .btn {
+  background: white;
+  color: var(--red);
+  border-color: white;
+}
+
+.contact .btn:hover {
+  background: #f4f4f4;
+}
+
+/* FOOTER */
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 35px 0;
+  margin-top: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+.footer-logo {
+  color: var(--red);
+  font-size: 20px;
+  font-weight: 900;
+}
+
+footer p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 700px) {
+  .nav-links {
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  .hero {
+    padding: 75px 0 55px;
+  }
+
+  .hero h1 {
+    letter-spacing: -2px;
+  }
+
+  .hero-visual {
+    padding: 22px;
+    margin-top: 45px;
+  }
+
+  .route strong {
+    font-size: 25px;
+  }
+
+  .route p {
+    font-size: 11px;
+  }
+
+  section {
+    padding: 65px 0;
+  }
+
+  .services,
+  .benefit-list,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .field.full {
+    grid-column: auto;
+  }
+
+  .quote-wrap {
+    padding: 20px;
+  }
+
+  .contact {
+    padding: 30px 24px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media(max-width: 390px) {
+  .logo {
+    font-size: 19px;
+  }
+
+  .nav-links {
+    gap: 9px;
+  }
+
+  .nav-links a {
+    font-size: 10px;
+  }
+
+  .dimensions {
+    gap: 5px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a href="#" class="logo">TIẾN VANLOG.</a>
+
+      <div class="nav-links">
+        <a href="#services">Dịch vụ</a>
+        <a href="#benefits">Lợi ích</a>
+        <a href="#quote">Báo giá</a>
+        <a href="#contact">Liên hệ</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<div class="container">
+  <div class="hero">
+
+    <div class="eyebrow">
+      GIẢI PHÁP VẬN CHUYỂN QUỐC TẾ
+    </div>
+
+    <h1>
+      Kết nối hàng hóa.<br>
+      <span class="red">Vươn xa thế giới.</span>
+    </h1>
+
+    <p class="hero-desc">
+      Đồng hành cùng bạn trong hành trình vận chuyển hàng hóa
+      đến các thị trường quốc tế. Tư vấn giải pháp phù hợp
+      với từng nhu cầu gửi hàng.
+    </p>
+
+    <a href="#quote" class="btn">
+      NHẬN BÁO GIÁ ↗
+    </a>
+
+    <div class="hero-visual">
+      <div class="eyebrow">
+        INTERNATIONAL SHIPPING
+      </div>
+
+      <div class="route">
+        <div>
+          <strong>VN</strong>
+          <p>Việt Nam</p>
+        </div>
+
+        <div class="route-center">
+          <div class="route-plane">✈</div>
+          <div class="route-line"></div>
+          <small>KẾT NỐI TOÀN CẦU</small>
+        </div>
+
+        <div>
+          <strong>WORLD</strong>
+          <p>Thị trường quốc tế</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SERVICES -->
+
+<section id="services">
+  <div class="container">
+
+    <div class="section-label">01 / DỊCH VỤ</div>
+
+    <h2 class="section-title">
+      Giải pháp cho mọi nhu cầu vận chuyển.
+    </h2>
+
+    <p class="section-desc">
+      Mỗi loại hàng hóa và thị trường có những yêu cầu
+      khác nhau. Hãy lựa chọn phương thức phù hợp
+      hoặc liên hệ để được tư vấn.
+    </p>
+
+    <div class="services">
+
+      <div class="service">
+        <div class="service-top">
+          <span class="service-number">01 / EXPRESS</span>
+          <span class="service-icon">↗</span>
+        </div>
+        <h3>Chuyển phát nhanh</h3>
+        <p>
+          Giải pháp vận chuyển quốc tế dành cho
+          khách hàng cần gửi hàng nhanh chóng.
+        </p>
+        <a href="#quote" class="service-link">Yêu cầu tư vấn →</a>
+      </div>
+
+      <div class="service">
+        <div class="service-top">
+          <span class="service-number">02 / TAX INCLUDED</span>
+          <span class="service-icon">↗</span>
+        </div>
+        <h3>Vận chuyển bao thuế</h3>
+        <p>
+          Giải pháp vận chuyển theo tuyến chuyên biệt,
+          tùy thuộc thị trường và điều kiện hàng hóa.
+        </p>
+        <a href="#quote" class="service-link">Yêu cầu tư vấn →</a>
+      </div>
+
+      <div class="service">
+        <div class="service-top">
+          <span class="service-number">03 / SEA FREIGHT</span>
+          <span class="service-icon">↗</span>
+        </div>
+        <h3>Vận chuyển đường biển</h3>
+        <p>
+          Phương thức vận tải dành cho nhu cầu
+          vận chuyển hàng hóa bằng đường biển.
+        </p>
+        <a href="#quote" class="service-link">Yêu cầu tư vấn →</a>
+      </div>
+
+      <div class="service">
+        <div class="service-top">
+          <span class="service-number">04 / EPACKET</span>
+          <span class="service-icon">↗</span>
+        </div>
+        <h3>ePacket</h3>
+        <p>
+          Giải pháp gửi hàng quốc tế theo
+          tuyến và điều kiện tiếp nhận cụ thể.
+        </p>
+        <a href="#quote" class="service-link">Yêu cầu tư vấn →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+
+<section class="benefits" id="benefits">
+  <div class="container">
+
+    <div class="section-label">02 / GIÁ TRỊ DỊCH VỤ</div>
+
+    <h2 class="section-title">
+      Không chỉ là vận chuyển.
+    </h2>
+
+    <p class="section-desc">
+      Một giải pháp phù hợp bắt đầu từ việc hiểu rõ
+      nhu cầu, hàng hóa và chi phí vận chuyển.
+    </p>
+
+    <div class="benefit-list">
+
+      <div class="benefit">
+        <div class="benefit-number">01</div>
+        <div>
+          <h3>Tư vấn tuyến vận chuyển</h3>
+          <p>
+            Hỗ trợ lựa chọn phương thức phù hợp
+            với hàng hóa, ngân sách và thời gian.
+          </p>
+        </div>
+      </div>
+
+      <div class="benefit">
+        <div class="benefit-number">02</div>
+        <div>
+          <h3>Kiểm tra hàng hóa</h3>
+          <p>
+            Hỗ trợ kiểm tra kích thước,
+            quy cách đóng gói và điều kiện tiếp nhận.
+          </p>
+        </div>
+      </div>
+
+      <div class="benefit">
+        <div class="benefit-number">03</div>
+        <div>
+          <h3>Minh bạch chi phí</h3>
+          <p>
+            Giải thích trọng lượng thực tế,
+            trọng lượng quy đổi và phụ phí liên quan.
+          </p>
+        </div>
+      </div>
+
+      <div class="benefit">
+        <div class="benefit-number">04</div>
+        <div>
+          <h3>Hỗ trợ theo dõi</h3>
+          <p>
+            Đồng hành và hỗ trợ khách hàng
+            trong quá trình vận chuyển.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- QUOTATION FORM -->
+
+<section id="quote">
+  <div class="container">
+
+    <div class="section-label">03 / YÊU CẦU BÁO GIÁ</div>
+
+    <h2 class="section-title">
+      Hãy cho chúng tôi biết nhu cầu của bạn.
+    </h2>
+
+    <p class="section-desc">
+      Cung cấp thông tin hàng hóa và điểm đến
+      để được tư vấn phương án vận chuyển.
+    </p>
+
+    <div class="quote-wrap">
+
+      <!-- CHƯA KẾT NỐI FORMSPREE -->
+      <form id="quoteForm">
+
+        <div class="form-grid">
+
+          <div class="field">
+            <label for="country">Quốc gia nhận hàng *</label>
+            <input id="country" name="country"
+              required placeholder="Ví dụ: Hoa Kỳ">
+          </div>
+
+          <div class="field">
+            <label for="service">Loại dịch vụ *</label>
+            <select id="service" name="service" required>
+              <option value="">Chọn dịch vụ</option>
+              <option value="Express">Express</option>
+              <option value="Vận chuyển bao thuế">Vận chuyển bao thuế</option>
+              <option value="Đường biển">Đường biển</option>
+              <option value="ePacket">ePacket</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="weight">Tổng trọng lượng thực tế (kg) *</label>
+            <input id="weight" name="weight"
+              type="number" min="0.01" step="0.01"
+              required placeholder="Ví dụ: 25">
+          </div>
+
+          <div class="field">
+            <label for="packageCount">Số lượng kiện hàng *</label>
+            <input id="packageCount" name="packageCount"
+              type="number" min="1" max="20"
+              value="1" required>
+          </div>
+
+          <div class="field full">
+            <label>Kích thước từng kiện hàng (cm) *</label>
+
+            <p class="form-note">
+              Nhập chiều dài, chiều rộng và chiều cao
+              riêng cho từng kiện hàng.
+            </p>
+
+            <div id="packages"></div>
+
+            <button type="button" class="add-btn" id="addPackage">
+              + Thêm kiện hàng
+            </button>
+          </div>
+
+          <div class="field">
+            <label for="customer">Họ và tên *</label>
+            <input id="customer" name="customer"
+              required placeholder="Nhập họ và tên">
+          </div>
+
+          <div class="field">
+            <label for="phone">Số điện thoại / Zalo *</label>
+            <input id="phone" name="phone"
+              type="tel" required placeholder="Nhập số điện thoại">
+          </div>
+
+          <div class="field full">
+            <label for="note">Thông tin bổ sung</label>
+            <textarea id="note" name="note" rows="4"
+              placeholder="Mô tả loại hàng, yêu cầu hoặc thông tin khác..."></textarea>
+          </div>
+
+          <div class="field full">
+            <button type="submit" class="btn">
+              GỬI YÊU CẦU BÁO GIÁ ↗
+            </button>
+
+            <p class="form-note">
+              Thông tin được sử dụng để phục vụ việc tư vấn báo giá.
+            </p>
+          </div>
+
+        </div>
+      </form>
+
+      <div id="formMessage" role="status" aria-live="polite"></div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+  <div class="container">
+
+    <div class="contact">
+
+      <div class="eyebrow">KẾT NỐI VỚI CHÚNG TÔI</div>
+
+      <h2>
+        Bạn cần gửi hàng đi quốc tế?
+      </h2>
+
+      <p>
+        Hãy để lại yêu cầu để được tư vấn
+        tuyến vận chuyển và báo giá phù hợp.
+      </p>
+
+      <a href="#quote" class="btn">
+        NHẬN TƯ VẤN NGAY ↗
+      </a>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+
+      <div>
+        <div class="footer-logo">TIẾN VANLOG.</div>
+        <p>Giải pháp vận chuyển quốc tế.</p>
+      </div>
+
+      <p>© 2026 TIẾN VANLOG. All rights reserved.</p>
+
+    </div>
+  </div>
+</footer>
+
+<script>
+
+// QUẢN LÝ KÍCH THƯỚC KIỆN HÀNG
+
+const packagesContainer = document.getElementById("packages");
+const addPackageButton = document.getElementById("addPackage");
+const packageCountInput = document.getElementById("packageCount");
+
+function updatePackageNumbers() {
+  const items = packagesContainer.querySelectorAll(".package");
+
+  items.forEach((item, index) => {
+    item.querySelector(".package-title").textContent =
+      `Kiện hàng ${index + 1}`;
+
+    item.querySelectorAll("input").forEach(input => {
+      input.required = true;
+    });
+
+    const removeButton = item.querySelector(".remove-package");
+
+    if (removeButton) {
+      removeButton.style.display =
+        items.length > 1 ? "inline-block" : "none";
+    }
+  });
+
+  packageCountInput.value = items.length;
+}
+
+function addPackage() {
+  if (packagesContainer.children.length >= 20) {
+    alert("Bạn có thể nhập tối đa 20 kiện hàng.");
+    return;
+  }
+
+  const item = document.createElement("div");
+  item.className = "package";
+
+  item.innerHTML = `
+    <div class="package-heading">
+      <span class="package-title"></span>
+      <button type="button" class="remove-package">
+        Xóa kiện
+      </button>
+    </div>
+
+    <div class="dimensions">
+      <input type="number" min="0.1" step="0.1"
+        placeholder="Dài (cm)" aria-label="Chiều dài" required>
+
+      <input type="number" min="0.1" step="0.1"
+        placeholder="Rộng (cm)" aria-label="Chiều rộng" required>
+
+      <input type="number" min="0.1" step="0.1"
+        placeholder="Cao (cm)" aria-label="Chiều cao" required>
+    </div>
+  `;
+
+  item.querySelector(".remove-package").addEventListener("click", () => {
+    item.remove();
+    updatePackageNumbers();
+  });
+
+  packagesContainer.appendChild(item);
+  updatePackageNumbers();
+}
+
+addPackageButton.addEventListener("click", addPackage);
+
+packageCountInput.addEventListener("change", () => {
+  let count = Math.max(
+    1,
+    Math.min(20, Number(packageCountInput.value) || 1)
+  );
+
+  while (packagesContainer.children.length < count) {
+    addPackage();
+  }
+
+  while (packagesContainer.children.length > count) {
+    packagesContainer.lastElementChild.remove();
+  }
+
+  updatePackageNumbers();
+});
+
+addPackage();
+
+// FORM DEMO - CHƯA GỬI DỮ LIỆU THẬT
+
+document.getElementById("quoteForm").addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const message = document.getElementById("formMessage");
+
+  message.style.display = "block";
+  message.style.background = "#fff0f0";
+  message.style.color = "#AD2020";
+
+  message.textContent =
+    "Biểu mẫu đang ở chế độ thử nghiệm. Hệ thống nhận yêu cầu báo giá chưa được kết nối. Vui lòng chờ cấu hình trước khi sử dụng chính thức.";
+});
+
+</script>
+
+</body>
+</html>
