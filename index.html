@@ -23,7 +23,11 @@
       --footer: #0b1730;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     html { scroll-behavior: smooth; }
 
@@ -34,8 +38,14 @@
       line-height: 1.7;
     }
 
-    a { color: inherit; text-decoration: none; }
-    button, input, select, textarea { font: inherit; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, input, select, textarea {
+      font: inherit;
+    }
 
     .container {
       width: min(1160px, 90%);
@@ -46,6 +56,8 @@
       height: 5px;
       background: var(--red);
     }
+
+    /* HEADER */
 
     header {
       border-bottom: 1px solid var(--line);
@@ -70,7 +82,10 @@
       white-space: nowrap;
     }
 
-    .logo span { color: var(--red); }
+    .logo span,
+    .footer-brand span {
+      color: var(--red);
+    }
 
     nav {
       display: flex;
@@ -93,6 +108,8 @@
       background: var(--red-dark);
       color: white;
     }
+
+    /* HERO */
 
     .hero {
       padding: 105px 0 110px;
@@ -151,11 +168,21 @@
       transition: .2s;
     }
 
-    .btn-primary { background: var(--red); color: white; }
+    .btn-primary {
+      background: var(--red);
+      color: white;
+    }
+
     .btn-primary:hover { background: var(--red-dark); }
 
-    .btn-outline { color: var(--red); background: transparent; }
+    .btn-outline {
+      color: var(--red);
+      background: transparent;
+    }
+
     .btn-outline:hover { background: #fff0f0; }
+
+    /* SECTIONS */
 
     section { padding: 85px 0; }
 
@@ -183,6 +210,8 @@
       margin-top: 12px;
       max-width: 680px;
     }
+
+    /* SERVICES */
 
     .services {
       display: grid;
@@ -222,6 +251,8 @@
       font-size: 14px;
       font-weight: 500;
     }
+
+    /* MARKETS */
 
     .markets-section { background: var(--light); }
 
@@ -263,6 +294,8 @@
       margin-top: 4px;
     }
 
+    /* BENEFITS */
+
     .benefits {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -280,7 +313,12 @@
       margin-bottom: 9px;
     }
 
-    .benefit p { color: var(--gray); font-size: 14px; }
+    .benefit p {
+      color: var(--gray);
+      font-size: 14px;
+    }
+
+    /* QUOTE FORM */
 
     .quote-section { background: #f7f7f7; }
 
@@ -310,7 +348,9 @@
       font-weight: 800;
     }
 
-    .field input, .field select, .field textarea {
+    .field input,
+    .field select,
+    .field textarea {
       width: 100%;
       padding: 13px 14px;
       border: 1px solid #ddd;
@@ -320,7 +360,9 @@
       font-size: 13px;
     }
 
-    .field input:focus, .field select:focus, .field textarea:focus {
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
       border-color: var(--red);
     }
 
@@ -338,7 +380,10 @@
       flex-wrap: wrap;
     }
 
-    .package-heading h3 { font-size: 17px; font-weight: 900; }
+    .package-heading h3 {
+      font-size: 17px;
+      font-weight: 900;
+    }
 
     .small-btn {
       border: 1px solid var(--red);
@@ -390,13 +435,19 @@
     }
 
     .submit-btn:hover { background: var(--red-dark); }
-    .submit-btn:disabled { opacity: .65; cursor: wait; }
+
+    .submit-btn:disabled {
+      opacity: .65;
+      cursor: wait;
+    }
 
     .form-note {
       margin-top: 12px;
       color: var(--gray);
       font-size: 12px;
     }
+
+    /* CONTACT CTA */
 
     .contact-section {
       padding: 65px 0;
@@ -449,6 +500,8 @@
     .zalo-label { font-size: 13px; }
     .zalo-number { font-size: 15px; letter-spacing: .3px; }
 
+    /* FOOTER */
+
     footer {
       background: var(--footer);
       color: white;
@@ -468,8 +521,6 @@
       letter-spacing: -1px;
       margin-bottom: 16px;
     }
-
-    .footer-brand span { color: #ff4a50; }
 
     .footer-about {
       color: #c5ccda;
@@ -554,6 +605,8 @@
 
     .footer-bottom a:hover { color: white; }
 
+    /* FLOATING SOCIAL BUTTONS */
+
     .floating-contact {
       position: fixed;
       right: 19px;
@@ -578,9 +631,25 @@
       transition: .2s;
     }
 
-    .floating-contact a:hover { transform: translateY(-3px); }
+    .floating-contact a:hover {
+      transform: translateY(-3px);
+    }
+
     .floating-zalo { background: #087cf0; }
-    .floating-facebook { background: #1877f2; font-size: 18px !important; }
+
+    .floating-facebook {
+      background: #1877f2;
+      font-size: 18px !important;
+    }
+
+    .floating-tiktok {
+      background: #000;
+      color: #fff;
+      border: 1px solid #444;
+      font-size: 24px !important;
+    }
+
+    /* RESPONSIVE */
 
     @media (max-width: 900px) {
       .footer-grid { grid-template-columns: repeat(2, 1fr); }
@@ -594,7 +663,11 @@
       nav a:not(.nav-cta) { display: none; }
       .nav-cta { padding: 9px 12px; }
 
-      .hero { padding: 75px 0; min-height: auto; }
+      .hero {
+        padding: 75px 0;
+        min-height: auto;
+      }
+
       .hero h1 {
         font-size: clamp(38px, 10vw, 50px);
         letter-spacing: -1.8px;
@@ -603,20 +676,46 @@
       .hero-description { font-size: 14px; }
       section { padding: 62px 0; }
       .services { grid-template-columns: 1fr; }
-      .markets-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-      .market-card { padding: 18px; min-height: 130px; }
+      .markets-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+      .market-card {
+        padding: 18px;
+        min-height: 130px;
+      }
+
       .market-card h3 { font-size: 14px; }
       .benefits { grid-template-columns: 1fr; }
       .quote-form { padding: 20px; }
       .form-grid { grid-template-columns: 1fr; }
       .field.full { grid-column: auto; }
       .package-grid { grid-template-columns: repeat(2, 1fr); }
-      .contact-inner { flex-direction: column; align-items: flex-start; }
+
+      .contact-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
       .zalo-cta { width: 100%; }
-      .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px 20px; }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 20px;
+      }
+
       .footer-bottom { flex-direction: column; }
-      .floating-contact { right: 12px; bottom: 15px; }
-      .floating-contact a { width: 43px; height: 43px; }
+
+      .floating-contact {
+        right: 12px;
+        bottom: 15px;
+      }
+
+      .floating-contact a {
+        width: 43px;
+        height: 43px;
+      }
     }
 
     @media (max-width: 390px) {
@@ -628,9 +727,11 @@
 <body>
   <div class="top-line"></div>
 
+  <!-- HEADER -->
   <header>
     <div class="container navbar">
       <a class="logo" href="#">TIẾN VANLOG<span>.</span></a>
+
       <nav>
         <a href="#services">Dịch vụ</a>
         <a href="#markets">Thị trường</a>
@@ -641,15 +742,22 @@
   </header>
 
   <main>
+    <!-- HERO -->
     <section class="hero">
       <div class="container">
         <div class="hero-content">
           <div class="eyebrow">INTERNATIONAL SHIPPING SOLUTIONS</div>
-          <h1>Giải pháp vận chuyển<br>quốc tế <span>hiệu quả.</span></h1>
+
+          <h1>
+            Giải pháp vận chuyển<br>
+            quốc tế <span>hiệu quả.</span>
+          </h1>
+
           <p class="hero-description">
             Kết nối hàng hóa từ Việt Nam đến các thị trường quốc tế với đa dạng
             phương thức vận chuyển và giải pháp phù hợp cho từng nhu cầu gửi hàng.
           </p>
+
           <div class="hero-actions">
             <a href="#quote" class="btn btn-primary">Yêu cầu báo giá</a>
             <a href="#services" class="btn btn-outline">Khám phá dịch vụ</a>
@@ -658,96 +766,171 @@
       </div>
     </section>
 
+    <!-- 01 SERVICES -->
     <section id="services">
       <div class="container">
         <div class="section-heading">
           <div class="section-number">01 / DỊCH VỤ</div>
           <h2>Các giải pháp vận chuyển</h2>
-          <p>Lựa chọn phương thức phù hợp với đặc điểm hàng hóa, ngân sách và thời gian vận chuyển.</p>
+          <p>
+            Lựa chọn phương thức phù hợp với đặc điểm hàng hóa,
+            ngân sách và thời gian vận chuyển.
+          </p>
         </div>
 
         <div class="services">
           <article class="service-card">
             <div class="service-no">01 — EXPRESS</div>
             <h3>Express</h3>
-            <p>Chuyển phát nhanh quốc tế, phù hợp với những lô hàng cần thời gian vận chuyển tối ưu.</p>
+            <p>
+              Chuyển phát nhanh quốc tế, phù hợp với những lô hàng
+              cần thời gian vận chuyển tối ưu.
+            </p>
           </article>
 
           <article class="service-card">
             <div class="service-no">02 — TAX INCLUDED</div>
             <h3>Vận chuyển bao thuế</h3>
-            <p>Giải pháp vận chuyển hỗ trợ xử lý các khoản thuế nhập khẩu theo điều kiện dịch vụ áp dụng.</p>
+            <p>
+              Giải pháp vận chuyển hỗ trợ xử lý các khoản thuế nhập khẩu
+              theo điều kiện dịch vụ áp dụng.
+            </p>
           </article>
 
           <article class="service-card">
             <div class="service-no">03 — SEA FREIGHT</div>
             <h3>Đường biển</h3>
-            <p>Phương án vận chuyển dành cho hàng hóa có khối lượng lớn hoặc không yêu cầu giao gấp.</p>
+            <p>
+              Phương án vận chuyển dành cho hàng hóa có khối lượng lớn
+              hoặc không yêu cầu giao gấp.
+            </p>
           </article>
 
           <article class="service-card">
             <div class="service-no">04 — ECOMMERCE</div>
             <h3>ePacket</h3>
-            <p>Giải pháp vận chuyển cho các lô hàng thương mại điện tử, tùy thuộc vào tuyến và điều kiện tiếp nhận.</p>
+            <p>
+              Giải pháp vận chuyển cho các lô hàng thương mại điện tử,
+              tùy thuộc vào tuyến và điều kiện tiếp nhận.
+            </p>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- 02 MARKETS -->
     <section class="markets-section" id="markets">
       <div class="container">
         <div class="section-heading">
           <div class="section-number">02 / THỊ TRƯỜNG TRỌNG TÂM</div>
           <h2>Kết nối hàng hóa, vươn ra thế giới.</h2>
-          <p>Các thị trường vận chuyển quốc tế được tập trung khai thác.</p>
+          <p>
+            Các thị trường vận chuyển quốc tế được tập trung khai thác.
+          </p>
         </div>
 
         <div class="markets-grid">
-          <article class="market-card"><div class="market-flag">🇺🇸</div><div class="market-number">01</div><h3>Hoa Kỳ</h3></article>
-          <article class="market-card"><div class="market-flag">🇨🇦</div><div class="market-number">02</div><h3>Canada</h3></article>
-          <article class="market-card"><div class="market-flag">🇦🇺</div><div class="market-number">03</div><h3>Úc</h3></article>
-          <article class="market-card"><div class="market-flag">🇪🇺</div><div class="market-number">04</div><h3>Châu Âu</h3></article>
-          <article class="market-card"><div class="market-flag">🇯🇵</div><div class="market-number">05</div><h3>Nhật Bản</h3></article>
-          <article class="market-card"><div class="market-flag">🇰🇷</div><div class="market-number">06</div><h3>Hàn Quốc</h3></article>
-          <article class="market-card"><div class="market-flag">🇹🇼</div><div class="market-number">07</div><h3>Đài Loan</h3></article>
-          <article class="market-card"><div class="market-flag">🇬🇧</div><div class="market-number">08</div><h3>Vương quốc Anh (UK)</h3></article>
+          <article class="market-card">
+            <div class="market-flag">🇺🇸</div>
+            <div class="market-number">01</div>
+            <h3>Hoa Kỳ</h3>
+          </article>
+
+          <article class="market-card">
+            <div class="market-flag">🇨🇦</div>
+            <div class="market-number">02</div>
+            <h3>Canada</h3>
+          </article>
+
+          <article class="market-card">
+            <div class="market-flag">🇦🇺</div>
+            <div class="market-number">03</div>
+            <h3>Úc</h3>
+          </article>
+
+          <article class="market-card">
+            <div class="market-flag">🇪🇺</div>
+            <div class="market-number">04</div>
+            <h3>Châu Âu</h3>
+          </article>
+
+          <article class="market-card">
+            <div class="market-flag">🇯🇵</div>
+            <div class="market-number">05</div>
+            <h3>Nhật Bản</h3>
+          </article>
+
+          <article class="market-card">
+            <div class="market-flag">🇰🇷</div>
+            <div class="market-number">06</div>
+            <h3>Hàn Quốc</h3>
+          </article>
+
+          <article class="market-card">
+            <div class="market-flag">🇹🇼</div>
+            <div class="market-number">07</div>
+            <h3>Đài Loan</h3>
+          </article>
+
+          <article class="market-card">
+            <div class="market-flag">🇬🇧</div>
+            <div class="market-number">08</div>
+            <h3>Vương quốc Anh (UK)</h3>
+          </article>
         </div>
       </div>
     </section>
 
+    <!-- 03 BENEFITS -->
     <section id="benefits">
       <div class="container">
         <div class="section-heading">
           <div class="section-number">03 / GIÁ TRỊ DỊCH VỤ</div>
           <h2>Đồng hành trong từng lô hàng</h2>
-          <p>Tập trung vào việc tư vấn phương án phù hợp và hỗ trợ khách hàng trong quá trình vận chuyển.</p>
+          <p>
+            Tập trung vào việc tư vấn phương án phù hợp và hỗ trợ
+            khách hàng trong quá trình vận chuyển.
+          </p>
         </div>
 
         <div class="benefits">
           <article class="benefit">
             <h3>Tư vấn phù hợp</h3>
-            <p>Hỗ trợ lựa chọn phương thức vận chuyển dựa trên loại hàng, trọng lượng và nhu cầu thực tế.</p>
+            <p>
+              Hỗ trợ lựa chọn phương thức vận chuyển dựa trên loại hàng,
+              trọng lượng và nhu cầu thực tế.
+            </p>
           </article>
 
           <article class="benefit">
             <h3>Thông tin minh bạch</h3>
-            <p>Trao đổi rõ ràng về cách tính cước, quy cách đóng gói và các khoản phụ phí áp dụng.</p>
+            <p>
+              Trao đổi rõ ràng về cách tính cước, quy cách đóng gói
+              và các khoản phụ phí áp dụng.
+            </p>
           </article>
 
           <article class="benefit">
             <h3>Hỗ trợ xuyên suốt</h3>
-            <p>Đồng hành và cập nhật thông tin trong quá trình tiếp nhận, vận chuyển và giao hàng.</p>
+            <p>
+              Đồng hành và cập nhật thông tin trong quá trình tiếp nhận,
+              vận chuyển và giao hàng.
+            </p>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- 04 QUOTE FORM -->
     <section class="quote-section" id="quote">
       <div class="container">
         <div class="section-heading">
           <div class="section-number">04 / YÊU CẦU BÁO GIÁ</div>
           <h2>Gửi thông tin lô hàng</h2>
-          <p>Cung cấp một số thông tin cơ bản để được tư vấn phương án vận chuyển phù hợp.</p>
+          <p>
+            Cung cấp một số thông tin cơ bản để được tư vấn
+            phương án vận chuyển phù hợp.
+          </p>
         </div>
 
         <form class="quote-form" id="quoteForm">
@@ -781,18 +964,30 @@
 
             <div class="field">
               <label for="weight">Tổng trọng lượng dự kiến (kg)</label>
-              <input id="weight" type="number" min="0" step="0.1" placeholder="Ví dụ: 25">
+              <input
+                id="weight"
+                type="number"
+                min="0"
+                step="0.1"
+                placeholder="Ví dụ: 25">
             </div>
 
             <div class="field">
               <label for="quantity">Số lượng kiện hàng</label>
-              <input id="quantity" type="number" min="1" max="20" value="1">
+              <input
+                id="quantity"
+                type="number"
+                min="1"
+                max="20"
+                value="1">
             </div>
           </div>
 
           <div class="package-heading">
             <h3>Kích thước kiện hàng (cm)</h3>
-            <button type="button" class="small-btn" id="addPackage">+ Thêm kiện</button>
+            <button type="button" class="small-btn" id="addPackage">
+              + Thêm kiện
+            </button>
           </div>
 
           <div id="packages">
@@ -810,27 +1005,44 @@
           <div class="form-grid" style="margin-top:25px">
             <div class="field">
               <label for="name">Họ và tên *</label>
-              <input id="name" type="text" required maxlength="120" placeholder="Nhập họ và tên">
+              <input
+                id="name"
+                type="text"
+                required
+                maxlength="120"
+                placeholder="Nhập họ và tên">
             </div>
 
             <div class="field">
               <label for="phone">Số điện thoại / Zalo *</label>
-              <input id="phone" type="tel" required maxlength="30" placeholder="Nhập số điện thoại">
+              <input
+                id="phone"
+                type="tel"
+                required
+                maxlength="30"
+                placeholder="Nhập số điện thoại">
             </div>
 
             <div class="field full">
               <label for="note">Thông tin hàng hóa / Ghi chú</label>
-              <textarea id="note" maxlength="2000" placeholder="Loại hàng, địa chỉ nhận, yêu cầu đặc biệt..."></textarea>
+              <textarea
+                id="note"
+                maxlength="2000"
+                placeholder="Loại hàng, địa chỉ nhận, yêu cầu đặc biệt..."></textarea>
             </div>
           </div>
 
-          <button type="submit" class="submit-btn">GỬI YÊU CẦU BÁO GIÁ</button>
+          <button type="submit" class="submit-btn">
+            GỬI YÊU CẦU BÁO GIÁ
+          </button>
+
           <p class="form-note">* Các thông tin có dấu sao là bắt buộc.</p>
           <p class="form-note" id="formStatus" role="status" aria-live="polite"></p>
         </form>
       </div>
     </section>
 
+    <!-- CONTACT CTA -->
     <section class="contact-section">
       <div class="container contact-inner">
         <div class="contact-copy">
@@ -838,11 +1050,13 @@
           <p>Liên hệ để được tư vấn phương án phù hợp với nhu cầu của bạn.</p>
         </div>
 
-        <a class="zalo-cta"
-           href="http://zaloapp.com/qr/p/p4z8flbu2vvd"
-           target="_blank"
-           rel="noopener"
-           aria-label="Liên hệ qua Zalo, số điện thoại 0907 268 440">
+        <a
+          class="zalo-cta"
+          href="http://zaloapp.com/qr/p/p4z8flbu2vvd"
+          target="_blank"
+          rel="noopener"
+          aria-label="Liên hệ qua Zalo, số điện thoại 0907 268 440">
+
           <span class="zalo-label">LIÊN HỆ QUA ZALO</span>
           <span class="zalo-number">0907 268 440</span>
         </a>
@@ -850,22 +1064,39 @@
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <div class="container">
       <div class="footer-grid">
+
         <div class="footer-column">
           <div class="footer-brand">VANLOG EXPRESS<span>.</span></div>
+
           <p class="footer-about">
-            Vanlog Express cung cấp các giải pháp vận chuyển quốc tế, hỗ trợ kết nối
-            hàng hóa từ Việt Nam đến nhiều thị trường trên thế giới. Đồng hành cùng
-            khách hàng trong việc lựa chọn phương thức vận chuyển phù hợp với từng lô hàng.
+            Vanlog Express cung cấp các giải pháp vận chuyển quốc tế,
+            hỗ trợ kết nối hàng hóa từ Việt Nam đến nhiều thị trường
+            trên thế giới. Đồng hành cùng khách hàng trong việc lựa chọn
+            phương thức vận chuyển phù hợp với từng lô hàng.
           </p>
 
           <div class="footer-social">
-            <a href="https://www.facebook.com/profile.php?id=61596860150676&amp;locale=vi_VN"
-               target="_blank" rel="noopener" aria-label="Facebook">f</a>
-            <a href="http://zaloapp.com/qr/p/p4z8flbu2vvd"
-               target="_blank" rel="noopener" aria-label="Zalo">Z</a>
+            <a
+              href="https://www.facebook.com/profile.php?id=61596860150676&amp;locale=vi_VN"
+              target="_blank"
+              rel="noopener"
+              aria-label="Facebook">f</a>
+
+            <a
+              href="http://zaloapp.com/qr/p/p4z8flbu2vvd"
+              target="_blank"
+              rel="noopener"
+              aria-label="Zalo">Z</a>
+
+            <a
+              href="https://www.tiktok.com/@tien.vanlog"
+              target="_blank"
+              rel="noopener"
+              aria-label="TikTok">♪</a>
           </div>
         </div>
 
@@ -891,6 +1122,7 @@
 
         <div class="footer-column">
           <h3>Liên hệ</h3>
+
           <div class="footer-contact-line">
             <span class="symbol">⌖</span>
             <span>27 Thăng Long, P. Tân Sơn Nhất, TP.HCM</span>
@@ -903,7 +1135,8 @@
 
           <div class="footer-contact-line">
             <span class="symbol">Z</span>
-            <a href="http://zaloapp.com/qr/p/p4z8flbu2vvd" target="_blank" rel="noopener">Zalo</a>
+            <a href="http://zaloapp.com/qr/p/p4z8flbu2vvd"
+               target="_blank" rel="noopener">Zalo</a>
           </div>
 
           <div class="footer-contact-line">
@@ -911,11 +1144,18 @@
             <a href="https://www.facebook.com/profile.php?id=61596860150676&amp;locale=vi_VN"
                target="_blank" rel="noopener">Facebook</a>
           </div>
+
+          <div class="footer-contact-line">
+            <span class="symbol">♪</span>
+            <a href="https://www.tiktok.com/@tien.vanlog"
+               target="_blank" rel="noopener">TikTok</a>
+          </div>
         </div>
       </div>
 
       <div class="footer-bottom">
         <div>© 2026 VANLOG EXPRESS. All rights reserved.</div>
+
         <div class="footer-bottom-links">
           <a href="#quote">Yêu cầu báo giá</a>
           <a href="#services">Dịch vụ</a>
@@ -925,19 +1165,37 @@
     </div>
   </footer>
 
+  <!-- FLOATING CONTACT BUTTONS -->
   <div class="floating-contact">
-    <a class="floating-zalo"
-       href="http://zaloapp.com/qr/p/p4z8flbu2vvd"
-       target="_blank" rel="noopener" aria-label="Liên hệ Zalo">Zalo</a>
 
-    <a class="floating-facebook"
-       href="https://www.facebook.com/profile.php?id=61596860150676&amp;locale=vi_VN"
-       target="_blank" rel="noopener" aria-label="Facebook">f</a>
+    <a
+      class="floating-zalo"
+      href="http://zaloapp.com/qr/p/p4z8flbu2vvd"
+      target="_blank"
+      rel="noopener"
+      aria-label="Liên hệ Zalo">Zalo</a>
+
+    <a
+      class="floating-facebook"
+      href="https://www.facebook.com/profile.php?id=61596860150676&amp;locale=vi_VN"
+      target="_blank"
+      rel="noopener"
+      aria-label="Facebook">f</a>
+
+    <a
+      class="floating-tiktok"
+      href="https://www.tiktok.com/@tien.vanlog"
+      target="_blank"
+      rel="noopener"
+      aria-label="TikTok">♪</a>
+
   </div>
 
+  <!-- FORM SUBMISSION -->
   <script>
     // URL Google Apps Script Web App của VANLOG.
-    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxfVib4y1l3K2_PqOzBjwtgEzj03TfN1MHdVgYnsQtX3sWBDt9rYjDP8mE5P9NaZGST/exec";
+    const SCRIPT_URL =
+      "https://script.google.com/macros/s/AKfycbxfVib4y1l3K2_PqOzBjwtgEzj03TfN1MHdVgYnsQtX3sWBDt9rYjDP8mE5P9NaZGST/exec";
 
     const packagesContainer = document.getElementById("packages");
     const addPackageButton = document.getElementById("addPackage");
@@ -946,54 +1204,68 @@
     const formStatus = document.getElementById("formStatus");
     const submitButton = quoteForm.querySelector(".submit-btn");
 
+    // Cập nhật tên và số lượng kiện hàng.
     function updatePackageNames() {
       [...packagesContainer.children].forEach((item, index) => {
-        item.querySelector("strong").textContent = `Kiện hàng ${index + 1}`;
+        item.querySelector("strong").textContent =
+          `Kiện hàng ${index + 1}`;
 
         const inputs = item.querySelectorAll(".package-grid input");
 
-        ["Dài", "Rộng", "Cao", "Trọng lượng"].forEach((label, inputIndex) => {
-          inputs[inputIndex].setAttribute(
-            "aria-label",
-            `${label} kiện ${index + 1}`
-          );
-        });
+        ["Dài", "Rộng", "Cao", "Trọng lượng"].forEach(
+          (label, inputIndex) => {
+            inputs[inputIndex].setAttribute(
+              "aria-label",
+              `${label} kiện ${index + 1}`
+            );
+          }
+        );
       });
 
       quantityInput.value = packagesContainer.children.length;
     }
 
+    // Tạo thêm một kiện hàng.
     function createPackage() {
       const item = document.createElement("div");
       item.className = "package-item";
 
       item.innerHTML = `
         <strong></strong>
+
         <div class="package-grid">
           <input type="number" min="0" placeholder="Dài (cm)">
           <input type="number" min="0" placeholder="Rộng (cm)">
           <input type="number" min="0" placeholder="Cao (cm)">
           <input type="number" min="0" step="0.1" placeholder="Kg">
         </div>
-        <button type="button" class="small-btn remove-package" style="margin-top:12px">
+
+        <button
+          type="button"
+          class="small-btn remove-package"
+          style="margin-top:12px">
           Xóa kiện
         </button>
       `;
 
-      item.querySelector(".remove-package").addEventListener("click", () => {
-        if (packagesContainer.children.length <= 1) {
-          alert("Cần có ít nhất một kiện hàng.");
-          return;
-        }
+      item.querySelector(".remove-package").addEventListener(
+        "click",
+        () => {
+          if (packagesContainer.children.length <= 1) {
+            alert("Cần có ít nhất một kiện hàng.");
+            return;
+          }
 
-        item.remove();
-        updatePackageNames();
-      });
+          item.remove();
+          updatePackageNames();
+        }
+      );
 
       packagesContainer.appendChild(item);
       updatePackageNames();
     }
 
+    // Nút thêm kiện.
     addPackageButton.addEventListener("click", () => {
       if (packagesContainer.children.length >= 20) {
         alert("Bạn có thể nhập tối đa 20 kiện hàng.");
@@ -1003,6 +1275,7 @@
       createPackage();
     });
 
+    // Đồng bộ số lượng kiện với số kiện hiển thị.
     quantityInput.addEventListener("change", () => {
       const count = Math.max(
         1,
@@ -1020,25 +1293,30 @@
       updatePackageNames();
     });
 
+    // Xử lý gửi yêu cầu báo giá.
     quoteForm.addEventListener("submit", async (event) => {
       event.preventDefault();
 
       if (!quoteForm.reportValidity()) return;
 
-      const packageDetails = [...packagesContainer.children].map((item, index) => {
-        const values = [
-          ...item.querySelectorAll(".package-grid input")
-        ].map(input => input.value.trim());
+      // Lấy thông tin từng kiện hàng.
+      const packageDetails = [...packagesContainer.children].map(
+        (item, index) => {
+          const values = [
+            ...item.querySelectorAll(".package-grid input")
+          ].map(input => input.value.trim());
 
-        return {
-          package: index + 1,
-          length: values[0],
-          width: values[1],
-          height: values[2],
-          weight: values[3]
-        };
-      });
+          return {
+            package: index + 1,
+            length: values[0],
+            width: values[1],
+            height: values[2],
+            weight: values[3]
+          };
+        }
+      );
 
+      // Chuẩn bị dữ liệu gửi đến Google Sheets.
       const data = {
         market: document.getElementById("country").value,
         service: document.getElementById("service").value,
@@ -1075,11 +1353,13 @@
           "Trình duyệt đã gửi yêu cầu. Vui lòng kiểm tra thông tin liên hệ; Vanlog sẽ phản hồi sau khi tiếp nhận."
         );
 
+        // Đặt lại form sau khi gửi.
         quoteForm.reset();
 
         packagesContainer.innerHTML = `
           <div class="package-item">
             <strong>Kiện hàng 1</strong>
+
             <div class="package-grid">
               <input type="number" min="0" placeholder="Dài (cm)" aria-label="Dài kiện 1">
               <input type="number" min="0" placeholder="Rộng (cm)" aria-label="Rộng kiện 1">
@@ -1090,6 +1370,7 @@
         `;
 
         quantityInput.value = 1;
+        updatePackageNames();
 
       } catch (error) {
         console.error("Lỗi gửi form:", error);
@@ -1097,7 +1378,9 @@
         formStatus.textContent =
           "Không gửi được yêu cầu. Vui lòng thử lại hoặc liên hệ Vanlog qua Zalo.";
 
-        alert("Không gửi được yêu cầu. Vui lòng thử lại hoặc liên hệ qua Zalo.");
+        alert(
+          "Không gửi được yêu cầu. Vui lòng thử lại hoặc liên hệ qua Zalo."
+        );
 
       } finally {
         submitButton.disabled = false;
@@ -1105,6 +1388,7 @@
       }
     });
 
+    // Khởi tạo form với một kiện hàng.
     updatePackageNames();
   </script>
 </body>
