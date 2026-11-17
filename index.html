@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Dịch vụ vận chuyển quốc tế: Express, vận chuyển bao thuế, đường biển và ePacket.">
-  <title>Tiến Vanlog | Vận chuyển quốc tế</title>
+  <meta name="description" content="Vanlog Express - Giải pháp vận chuyển quốc tế, chuyển phát nhanh, vận tải hàng không và đường biển.">
+  <title>TIẾN VANLOG | VANLOG EXPRESS</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,6 +16,7 @@
       --red: #d9272e;
       --red-dark: #b91f27;
       --black: #171717;
+      --dark: #101010;
       --gray: #666;
       --light: #f5f5f5;
       --line: #e7e7e7;
@@ -58,9 +59,11 @@
       background: var(--red);
     }
 
+    /* HEADER */
+
     header {
       border-bottom: 1px solid var(--line);
-      background: #fff;
+      background: rgba(255,255,255,.97);
       position: sticky;
       top: 0;
       z-index: 100;
@@ -78,6 +81,7 @@
       font-size: 24px;
       font-weight: 900;
       letter-spacing: -1.3px;
+      white-space: nowrap;
     }
 
     .logo span {
@@ -108,11 +112,32 @@
       color: white;
     }
 
+    /* HERO */
+
     .hero {
-      padding: 105px 0 110px;
+      position: relative;
+      overflow: hidden;
+      padding: 75px 0;
+      min-height: 535px;
+      display: flex;
+      align-items: center;
       background:
-        linear-gradient(110deg, #fff 0%, #fff 65%, #fff4f4 100%);
+        linear-gradient(105deg, #fff 0%, #fff 48%, #fff7f7 100%);
       border-bottom: 1px solid var(--line);
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 15px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
     }
 
     .eyebrow {
@@ -125,29 +150,29 @@
     }
 
     .hero h1 {
-      font-size: clamp(40px, 6vw, 72px);
+      font-size: clamp(39px, 5vw, 64px);
       line-height: 1.17;
-      letter-spacing: -3px;
+      letter-spacing: -2.8px;
       font-weight: 900;
-      max-width: 850px;
+      max-width: 690px;
     }
 
     .hero h1 span {
       color: var(--red);
     }
 
-    .hero p {
-      margin-top: 24px;
-      max-width: 590px;
+    .hero-description {
+      margin-top: 23px;
+      max-width: 570px;
       color: var(--gray);
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 500;
     }
 
     .hero-actions {
       display: flex;
       gap: 13px;
-      margin-top: 35px;
+      margin-top: 32px;
       flex-wrap: wrap;
     }
 
@@ -155,7 +180,7 @@
       display: inline-flex;
       justify-content: center;
       align-items: center;
-      padding: 14px 23px;
+      padding: 14px 22px;
       border-radius: 5px;
       font-size: 13px;
       font-weight: 800;
@@ -181,26 +206,45 @@
       background: #fff0f0;
     }
 
+    .hero-visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 0;
+    }
+
+    .hero-visual img {
+      display: block;
+      width: 115%;
+      max-width: 660px;
+      height: auto;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+      transform: translateX(10px);
+    }
+
+    /* GENERAL SECTIONS */
+
     section {
-      padding: 90px 0;
+      padding: 85px 0;
     }
 
     .section-heading {
-      margin-bottom: 42px;
+      margin-bottom: 40px;
     }
 
     .section-number {
       color: var(--red);
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 900;
       letter-spacing: 1.5px;
       margin-bottom: 13px;
     }
 
     .section-heading h2 {
-      font-size: clamp(29px, 4vw, 43px);
+      font-size: clamp(29px, 4vw, 42px);
       font-weight: 900;
-      letter-spacing: -1.5px;
+      letter-spacing: -1.4px;
       line-height: 1.3;
     }
 
@@ -209,8 +253,10 @@
       font-size: 14px;
       font-weight: 500;
       margin-top: 12px;
-      max-width: 650px;
+      max-width: 680px;
     }
+
+    /* SERVICES */
 
     .services {
       display: grid;
@@ -223,6 +269,7 @@
       padding: 30px;
       min-height: 215px;
       transition: .2s;
+      background: white;
     }
 
     .service-card:hover {
@@ -231,7 +278,7 @@
     }
 
     .service-no {
-      font-size: 14px;
+      font-size: 13px;
       color: var(--red);
       font-weight: 900;
       letter-spacing: 1px;
@@ -240,7 +287,7 @@
     .service-card h3 {
       font-size: 27px;
       font-weight: 900;
-      margin: 18px 0 10px;
+      margin: 17px 0 10px;
       letter-spacing: -.7px;
     }
 
@@ -249,6 +296,8 @@
       font-size: 14px;
       font-weight: 500;
     }
+
+    /* MARKETS */
 
     .markets-section {
       background: var(--light);
@@ -263,7 +312,7 @@
     .market-card {
       background: white;
       border: 1px solid #e9e9e9;
-      padding: 25px 22px;
+      padding: 24px 22px;
       min-height: 145px;
       transition: .2s;
     }
@@ -275,7 +324,7 @@
 
     .market-flag {
       font-size: 30px;
-      margin-bottom: 12px;
+      margin-bottom: 11px;
       line-height: 1.2;
     }
 
@@ -291,6 +340,8 @@
       font-weight: 800;
       margin-top: 4px;
     }
+
+    /* BENEFITS */
 
     .benefits {
       display: grid;
@@ -313,6 +364,8 @@
       color: var(--gray);
       font-size: 14px;
     }
+
+    /* QUOTE FORM */
 
     .quote-section {
       background: #f7f7f7;
@@ -442,8 +495,10 @@
       font-size: 12px;
     }
 
+    /* CONTACT CTA */
+
     .contact-section {
-      padding: 70px 0;
+      padding: 65px 0;
       background: var(--black);
       color: white;
     }
@@ -453,58 +508,172 @@
       justify-content: space-between;
       align-items: center;
       gap: 30px;
-      flex-wrap: wrap;
     }
 
-    .contact-inner h2 {
+    .contact-copy h2 {
       font-size: clamp(27px, 4vw, 40px);
       font-weight: 900;
       line-height: 1.3;
     }
 
-    .contact-inner p {
+    .contact-copy p {
       color: #ccc;
       margin-top: 12px;
       font-size: 14px;
     }
 
-    footer {
-      padding: 25px 0;
-      background: #111;
-      color: #aaa;
-      font-size: 12px;
+    .zalo-cta {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      min-width: 205px;
+      padding: 13px 20px;
+      border-radius: 5px;
+      background: var(--red);
+      color: white;
+      text-align: center;
+      font-weight: 900;
+      transition: .2s;
+      line-height: 1.6;
+      flex-shrink: 0;
     }
 
-    .footer-inner {
+    .zalo-cta:hover {
+      background: var(--red-dark);
+      transform: translateY(-2px);
+    }
+
+    .zalo-cta .zalo-label {
+      font-size: 13px;
+    }
+
+    .zalo-cta .zalo-number {
+      font-size: 15px;
+      letter-spacing: .3px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #0b1730;
+      color: white;
+      padding: 55px 0 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1.25fr 1.25fr;
+      gap: 38px;
+      padding-bottom: 38px;
+    }
+
+    .footer-brand {
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+    }
+
+    .footer-brand span {
+      color: #ff4a50;
+    }
+
+    .footer-about {
+      color: #c5ccda;
+      font-size: 13px;
+      line-height: 1.9;
+      max-width: 340px;
+    }
+
+    .footer-column h3 {
+      font-size: 15px;
+      font-weight: 800;
+      margin-bottom: 18px;
+      color: white;
+    }
+
+    .footer-column ul {
+      list-style: none;
+    }
+
+    .footer-column li {
+      margin-bottom: 10px;
+      color: #c5ccda;
+      font-size: 13px;
+    }
+
+    .footer-column a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .footer-contact-line {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      margin-bottom: 13px;
+      color: #c5ccda;
+      font-size: 13px;
+    }
+
+    .footer-contact-line .symbol {
+      color: #ff555b;
+      font-weight: 900;
+      min-width: 17px;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .footer-social a {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #243653;
+      color: white;
+      font-size: 12px;
+      font-weight: 900;
+      transition: .2s;
+    }
+
+    .footer-social a:hover {
+      background: var(--red);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.18);
+      padding-top: 18px;
       display: flex;
       justify-content: space-between;
       gap: 20px;
       flex-wrap: wrap;
+      color: #b8c1d1;
+      font-size: 12px;
     }
 
-    .footer-logo {
-      color: white;
-      font-weight: 900;
-      font-size: 17px;
-    }
-
-    .footer-logo span {
-      color: var(--red);
-    }
-
-    .footer-links {
+    .footer-bottom-links {
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
     }
 
-    .footer-links a:hover {
+    .footer-bottom a:hover {
       color: white;
     }
 
+    /* FLOATING CONTACT */
+
     .floating-contact {
       position: fixed;
-      right: 20px;
+      right: 19px;
       bottom: 22px;
       z-index: 99;
       display: flex;
@@ -513,8 +682,8 @@
     }
 
     .floating-contact a {
-      width: 49px;
-      height: 49px;
+      width: 48px;
+      height: 48px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -523,32 +692,47 @@
       font-size: 12px;
       font-weight: 900;
       box-shadow: 0 3px 12px #0002;
+      transition: .2s;
     }
 
-    .zalo {
+    .floating-contact a:hover {
+      transform: translateY(-3px);
+    }
+
+    .floating-zalo {
       background: #087cf0;
     }
 
-    .facebook {
+    .floating-facebook {
       background: #1877f2;
+      font-size: 18px !important;
     }
 
-    @media (max-width: 800px) {
-      nav {
-        gap: 12px;
-        font-size: 11px;
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: 1fr 1fr;
       }
 
-      .markets-grid {
+      .hero h1 {
+        font-size: 43px;
+      }
+
+      .hero-visual img {
+        width: 125%;
+      }
+
+      .footer-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .benefits {
-        grid-template-columns: 1fr;
+      .markets-grid {
+        grid-template-columns: repeat(4, 1fr);
       }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 650px) {
       .navbar {
         min-height: 65px;
       }
@@ -557,20 +741,49 @@
         font-size: 20px;
       }
 
+      nav {
+        gap: 12px;
+        font-size: 11px;
+      }
+
       nav a:not(.nav-cta) {
         display: none;
       }
 
+      .nav-cta {
+        padding: 9px 12px;
+      }
+
       .hero {
-        padding: 75px 0;
+        padding: 55px 0 35px;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 5px;
       }
 
       .hero h1 {
+        font-size: clamp(37px, 10vw, 48px);
         letter-spacing: -1.8px;
       }
 
+      .hero-description {
+        font-size: 14px;
+      }
+
+      .hero-visual {
+        margin-top: 12px;
+      }
+
+      .hero-visual img {
+        width: 100%;
+        max-width: 520px;
+        transform: none;
+      }
+
       section {
-        padding: 65px 0;
+        padding: 62px 0;
       }
 
       .services {
@@ -578,16 +791,21 @@
       }
 
       .markets-grid {
+        grid-template-columns: repeat(2, 1fr);
         gap: 10px;
       }
 
       .market-card {
         padding: 18px;
-        min-height: 135px;
+        min-height: 130px;
       }
 
       .market-card h3 {
         font-size: 14px;
+      }
+
+      .benefits {
+        grid-template-columns: 1fr;
       }
 
       .quote-form {
@@ -606,6 +824,24 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
+      .contact-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .zalo-cta {
+        width: 100%;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 20px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+
       .floating-contact {
         right: 12px;
         bottom: 15px;
@@ -616,15 +852,23 @@
         height: 43px;
       }
     }
+
+    @media (max-width: 390px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 
 <body>
   <div class="top-line"></div>
 
+  <!-- HEADER -->
   <header>
     <div class="container navbar">
       <a class="logo" href="#">TIẾN VANLOG<span>.</span></a>
+
       <nav>
         <a href="#services">Dịch vụ</a>
         <a href="#markets">Thị trường</a>
@@ -635,58 +879,90 @@
   </header>
 
   <main>
+    <!-- HERO -->
     <section class="hero">
-      <div class="container">
-        <div class="eyebrow">INTERNATIONAL SHIPPING SOLUTIONS</div>
-        <h1>Giải pháp vận chuyển quốc tế <span>hiệu quả.</span></h1>
-        <p>
-          Kết nối hàng hóa từ Việt Nam đến các thị trường quốc tế
-          với đa dạng phương thức vận chuyển và giải pháp phù hợp
-          cho từng nhu cầu gửi hàng.
-        </p>
-        <div class="hero-actions">
-          <a href="#quote" class="btn btn-primary">Yêu cầu báo giá</a>
-          <a href="#services" class="btn btn-outline">Khám phá dịch vụ</a>
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <div class="eyebrow">INTERNATIONAL SHIPPING SOLUTIONS</div>
+
+          <h1>
+            Giải pháp vận chuyển
+            quốc tế <span>hiệu quả.</span>
+          </h1>
+
+          <p class="hero-description">
+            Kết nối hàng hóa từ Việt Nam đến các thị trường quốc tế
+            với đa dạng phương thức vận chuyển và giải pháp phù hợp
+            cho từng nhu cầu gửi hàng.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#quote" class="btn btn-primary">Yêu cầu báo giá</a>
+            <a href="#services" class="btn btn-outline">Khám phá dịch vụ</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <img
+            src="hero-aircraft.png"
+            alt="Máy bay vận chuyển quốc tế cùng địa cầu và các kiện hàng">
         </div>
       </div>
     </section>
 
+    <!-- SERVICES -->
     <section id="services">
       <div class="container">
         <div class="section-heading">
           <div class="section-number">01 / DỊCH VỤ</div>
           <h2>Các giải pháp vận chuyển</h2>
-          <p>Lựa chọn phương thức phù hợp với đặc điểm hàng hóa, ngân sách và thời gian vận chuyển.</p>
+          <p>
+            Lựa chọn phương thức phù hợp với đặc điểm hàng hóa,
+            ngân sách và thời gian vận chuyển.
+          </p>
         </div>
 
         <div class="services">
           <article class="service-card">
             <div class="service-no">01 — EXPRESS</div>
             <h3>Express</h3>
-            <p>Chuyển phát nhanh quốc tế, phù hợp với những lô hàng cần thời gian vận chuyển tối ưu.</p>
+            <p>
+              Chuyển phát nhanh quốc tế, phù hợp với những lô hàng
+              cần thời gian vận chuyển tối ưu.
+            </p>
           </article>
 
           <article class="service-card">
             <div class="service-no">02 — TAX INCLUDED</div>
             <h3>Vận chuyển bao thuế</h3>
-            <p>Giải pháp vận chuyển hỗ trợ xử lý các khoản thuế nhập khẩu theo điều kiện dịch vụ áp dụng.</p>
+            <p>
+              Giải pháp vận chuyển hỗ trợ xử lý các khoản thuế nhập khẩu
+              theo điều kiện dịch vụ áp dụng.
+            </p>
           </article>
 
           <article class="service-card">
             <div class="service-no">03 — SEA FREIGHT</div>
             <h3>Đường biển</h3>
-            <p>Phương án vận chuyển dành cho hàng hóa có khối lượng lớn hoặc không yêu cầu giao gấp.</p>
+            <p>
+              Phương án vận chuyển dành cho hàng hóa có khối lượng lớn
+              hoặc không yêu cầu giao gấp.
+            </p>
           </article>
 
           <article class="service-card">
             <div class="service-no">04 — ECOMMERCE</div>
             <h3>ePacket</h3>
-            <p>Giải pháp vận chuyển cho các lô hàng thương mại điện tử, tùy thuộc vào tuyến và điều kiện tiếp nhận.</p>
+            <p>
+              Giải pháp vận chuyển cho các lô hàng thương mại điện tử,
+              tùy thuộc vào tuyến và điều kiện tiếp nhận.
+            </p>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- MARKETS -->
     <section class="markets-section" id="markets">
       <div class="container">
         <div class="section-heading">
@@ -747,39 +1023,56 @@
       </div>
     </section>
 
+    <!-- BENEFITS -->
     <section id="benefits">
       <div class="container">
         <div class="section-heading">
           <div class="section-number">03 / GIÁ TRỊ DỊCH VỤ</div>
           <h2>Đồng hành trong từng lô hàng</h2>
-          <p>Tập trung vào việc tư vấn phương án phù hợp và hỗ trợ khách hàng trong quá trình vận chuyển.</p>
+          <p>
+            Tập trung vào việc tư vấn phương án phù hợp và hỗ trợ
+            khách hàng trong quá trình vận chuyển.
+          </p>
         </div>
 
         <div class="benefits">
           <article class="benefit">
             <h3>Tư vấn phù hợp</h3>
-            <p>Hỗ trợ lựa chọn phương thức vận chuyển dựa trên loại hàng, trọng lượng và nhu cầu thực tế.</p>
+            <p>
+              Hỗ trợ lựa chọn phương thức vận chuyển dựa trên loại hàng,
+              trọng lượng và nhu cầu thực tế.
+            </p>
           </article>
 
           <article class="benefit">
             <h3>Thông tin minh bạch</h3>
-            <p>Trao đổi rõ ràng về cách tính cước, quy cách đóng gói và các khoản phụ phí áp dụng.</p>
+            <p>
+              Trao đổi rõ ràng về cách tính cước, quy cách đóng gói
+              và các khoản phụ phí áp dụng.
+            </p>
           </article>
 
           <article class="benefit">
             <h3>Hỗ trợ xuyên suốt</h3>
-            <p>Đồng hành và cập nhật thông tin trong quá trình tiếp nhận, vận chuyển và giao hàng.</p>
+            <p>
+              Đồng hành và cập nhật thông tin trong quá trình tiếp nhận,
+              vận chuyển và giao hàng.
+            </p>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- QUOTE FORM -->
     <section class="quote-section" id="quote">
       <div class="container">
         <div class="section-heading">
           <div class="section-number">04 / YÊU CẦU BÁO GIÁ</div>
           <h2>Gửi thông tin lô hàng</h2>
-          <p>Cung cấp một số thông tin cơ bản để được tư vấn phương án vận chuyển phù hợp.</p>
+          <p>
+            Cung cấp một số thông tin cơ bản để được tư vấn
+            phương án vận chuyển phù hợp.
+          </p>
         </div>
 
         <form class="quote-form" id="quoteForm">
@@ -824,7 +1117,9 @@
 
           <div class="package-heading">
             <h3>Kích thước kiện hàng (cm)</h3>
-            <button type="button" class="small-btn" id="addPackage">+ Thêm kiện</button>
+            <button type="button" class="small-btn" id="addPackage">
+              + Thêm kiện
+            </button>
           </div>
 
           <div id="packages">
@@ -856,37 +1151,157 @@
             </div>
           </div>
 
-          <button type="submit" class="submit-btn">GỬI YÊU CẦU BÁO GIÁ</button>
-          <p class="form-note">* Các thông tin có dấu sao là bắt buộc.</p>
+          <button type="submit" class="submit-btn">
+            GỬI YÊU CẦU BÁO GIÁ
+          </button>
+
+          <p class="form-note">
+            * Các thông tin có dấu sao là bắt buộc.
+          </p>
         </form>
       </div>
     </section>
 
+    <!-- CONTACT CTA -->
     <section class="contact-section">
       <div class="container contact-inner">
-        <div>
+        <div class="contact-copy">
           <h2>Bạn đang có lô hàng cần vận chuyển?</h2>
-          <p>Liên hệ để được tư vấn phương án phù hợp với nhu cầu của bạn.</p>
+          <p>
+            Liên hệ để được tư vấn phương án phù hợp với nhu cầu của bạn.
+          </p>
         </div>
-        <a class="btn btn-primary" href="http://zaloapp.com/qr/p/p4z8flbu2vvd" target="_blank" rel="noopener">LIÊN HỆ QUA ZALO</a>
+
+        <a
+          class="zalo-cta"
+          href="http://zaloapp.com/qr/p/p4z8flbu2vvd"
+          target="_blank"
+          rel="noopener"
+          aria-label="Liên hệ qua Zalo, số điện thoại 0907 268 440">
+
+          <span class="zalo-label">LIÊN HỆ QUA ZALO</span>
+          <span class="zalo-number">0907 268 440</span>
+        </a>
       </div>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer>
-    <div class="container footer-inner">
-      <div class="footer-logo">TIẾN VANLOG<span>.</span></div>
-      <div>© 2026 TIẾN VANLOG. All rights reserved.</div>
-      <div class="footer-links">
-        <a href="http://zaloapp.com/qr/p/p4z8flbu2vvd" target="_blank" rel="noopener">Zalo</a>
-        <a href="https://www.facebook.com/profile.php?id=61596860150676&locale=vi_VN" target="_blank" rel="noopener">Facebook</a>
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-column">
+          <div class="footer-brand">VANLOG EXPRESS<span>.</span></div>
+
+          <p class="footer-about">
+            Vanlog Express cung cấp các giải pháp vận chuyển quốc tế,
+            hỗ trợ kết nối hàng hóa từ Việt Nam đến nhiều thị trường
+            trên thế giới. Đồng hành cùng khách hàng trong việc lựa chọn
+            phương thức vận chuyển phù hợp với từng lô hàng.
+          </p>
+
+          <div class="footer-social">
+            <a
+              href="https://www.facebook.com/profile.php?id=61596860150676&locale=vi_VN"
+              target="_blank"
+              rel="noopener"
+              aria-label="Facebook">f</a>
+
+            <a
+              href="http://zaloapp.com/qr/p/p4z8flbu2vvd"
+              target="_blank"
+              rel="noopener"
+              aria-label="Zalo">Z</a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h3>Dịch vụ</h3>
+          <ul>
+            <li><a href="#services">Chuyển phát nhanh quốc tế</a></li>
+            <li><a href="#services">Vận tải hàng không</a></li>
+            <li><a href="#services">Vận tải đường biển</a></li>
+            <li><a href="#services">Vận chuyển bao thuế</a></li>
+            <li><a href="#services">ePacket</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Thông tin</h3>
+          <ul>
+            <li><a href="#benefits">Giới thiệu</a></li>
+            <li><a href="#benefits">Giải pháp vận chuyển</a></li>
+            <li>Quy định sử dụng</li>
+            <li>Chính sách bảo mật</li>
+            <li>Hàng hóa cấm gửi</li>
+            <li>Khiếu nại &amp; Đền bù</li>
+            <li>Trách nhiệm các bên</li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Liên hệ</h3>
+
+          <div class="footer-contact-line">
+            <span class="symbol">⌖</span>
+            <span>27 Thăng Long, P. Tân Sơn Nhất, TP.HCM</span>
+          </div>
+
+          <div class="footer-contact-line">
+            <span class="symbol">☎</span>
+            <a href="tel:0907268440">0907 268 440</a>
+          </div>
+
+          <div class="footer-contact-line">
+            <span class="symbol">Z</span>
+            <a href="http://zaloapp.com/qr/p/p4z8flbu2vvd" target="_blank" rel="noopener">
+              Zalo
+            </a>
+          </div>
+
+          <div class="footer-contact-line">
+            <span class="symbol">f</span>
+            <a
+              href="https://www.facebook.com/profile.php?id=61596860150676&locale=vi_VN"
+              target="_blank"
+              rel="noopener">
+              Facebook
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 VANLOG EXPRESS. All rights reserved.
+        </div>
+
+        <div class="footer-bottom-links">
+          <a href="#quote">Yêu cầu báo giá</a>
+          <a href="#services">Dịch vụ</a>
+          <a href="#markets">Thị trường</a>
+        </div>
       </div>
     </div>
   </footer>
 
+  <!-- FLOATING CONTACT BUTTONS -->
   <div class="floating-contact">
-    <a class="zalo" href="http://zaloapp.com/qr/p/p4z8flbu2vvd" target="_blank" rel="noopener" aria-label="Liên hệ Zalo">Zalo</a>
-    <a class="facebook" href="https://www.facebook.com/profile.php?id=61596860150676&locale=vi_VN" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+    <a
+      class="floating-zalo"
+      href="http://zaloapp.com/qr/p/p4z8flbu2vvd"
+      target="_blank"
+      rel="noopener"
+      aria-label="Liên hệ Zalo">Zalo</a>
+
+    <a
+      class="floating-facebook"
+      href="https://www.facebook.com/profile.php?id=61596860150676&locale=vi_VN"
+      target="_blank"
+      rel="noopener"
+      aria-label="Facebook">f</a>
   </div>
 
   <script>
@@ -898,17 +1313,14 @@
       [...packages.children].forEach((item, index) => {
         item.querySelector("strong").textContent = `Kiện hàng ${index + 1}`;
       });
+
       quantity.value = packages.children.length;
     }
 
-    addPackage.addEventListener("click", () => {
-      if (packages.children.length >= 20) {
-        alert("Bạn có thể nhập tối đa 20 kiện hàng.");
-        return;
-      }
-
+    function createPackage() {
       const item = document.createElement("div");
       item.className = "package-item";
+
       item.innerHTML = `
         <strong></strong>
         <div class="package-grid">
@@ -917,23 +1329,39 @@
           <input type="number" min="0" placeholder="Cao (cm)" aria-label="Cao kiện hàng">
           <input type="number" min="0" step="0.1" placeholder="Kg" aria-label="Trọng lượng kiện hàng">
         </div>
-        <button type="button" class="small-btn remove-package" style="margin-top:12px">Xóa kiện</button>
+        <button type="button" class="small-btn remove-package" style="margin-top:12px">
+          Xóa kiện
+        </button>
       `;
 
       item.querySelector(".remove-package").addEventListener("click", () => {
+        if (packages.children.length <= 1) {
+          alert("Cần có ít nhất một kiện hàng.");
+          return;
+        }
+
         item.remove();
         updatePackageNames();
       });
 
       packages.appendChild(item);
       updatePackageNames();
+    }
+
+    addPackage.addEventListener("click", () => {
+      if (packages.children.length >= 20) {
+        alert("Bạn có thể nhập tối đa 20 kiện hàng.");
+        return;
+      }
+
+      createPackage();
     });
 
     quantity.addEventListener("change", () => {
       let count = Math.max(1, Math.min(20, Number(quantity.value) || 1));
 
       while (packages.children.length < count) {
-        addPackage.click();
+        createPackage();
       }
 
       while (packages.children.length > count) {
@@ -945,7 +1373,10 @@
 
     document.getElementById("quoteForm").addEventListener("submit", (event) => {
       event.preventDefault();
-      alert("Biểu mẫu hiện mới là bản giao diện thử nghiệm, chưa kết nối hệ thống nhận yêu cầu. Vui lòng liên hệ trực tiếp qua Zalo để được hỗ trợ.");
+
+      alert(
+        "Biểu mẫu hiện mới là giao diện thử nghiệm, chưa kết nối hệ thống nhận yêu cầu. Vui lòng liên hệ trực tiếp qua Zalo để được hỗ trợ."
+      );
     });
   </script>
 </body>
