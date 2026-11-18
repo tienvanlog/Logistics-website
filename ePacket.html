@@ -1,0 +1,1159 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dịch vụ ePacket TIẾN VANLOG - Vận chuyển hàng nhỏ gọn đi Mỹ, Anh, Canada, Úc và Châu Âu. Bao thuế, giao hàng tận nơi.">
+  <title>ePacket - Vận chuyển quốc tế | TIẾN VANLOG</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --red: #d71920;
+      --dark: #171717;
+      --navy: #0b1730;
+      --gray: #666;
+      --light: #f6f6f6;
+      --border: #e8e8e8;
+      --white: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      font-family: 'Be Vietnam Pro', sans-serif;
+      color: var(--dark);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1140px, 90%);
+      margin: auto;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+
+    .navbar {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: var(--red);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 600;
+      transition: .2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--red);
+    }
+
+    .nav-contact {
+      background: var(--red);
+      color: white !important;
+      padding: 11px 19px;
+      border-radius: 4px;
+    }
+
+    .nav-contact:hover {
+      background: #b9141a;
+    }
+
+    /* HERO */
+
+    .hero {
+      background: var(--light);
+      padding: 95px 0 90px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-content {
+      max-width: 790px;
+    }
+
+    .eyebrow {
+      color: var(--red);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(34px, 5vw, 54px);
+      line-height: 1.25;
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span {
+      color: var(--red);
+    }
+
+    .hero-description {
+      color: #555;
+      font-size: 16px;
+      max-width: 690px;
+      margin-bottom: 30px;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+
+    .hero-tags span {
+      background: white;
+      border: 1px solid #e3e3e3;
+      padding: 9px 15px;
+      border-radius: 3px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .hero-tags span::before {
+      content: "✓";
+      color: var(--red);
+      font-weight: 800;
+      margin-right: 7px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 24px;
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: 4px;
+      transition: .25s;
+    }
+
+    .btn-red {
+      background: var(--red);
+      color: white;
+    }
+
+    .btn-red:hover {
+      background: #b9141a;
+      transform: translateY(-2px);
+    }
+
+    .btn-dark {
+      background: var(--dark);
+      color: white;
+    }
+
+    .btn-dark:hover {
+      background: #333;
+      transform: translateY(-2px);
+    }
+
+    /* GENERAL SECTIONS */
+
+    .section {
+      padding: 85px 0;
+    }
+
+    .section-light {
+      background: var(--light);
+    }
+
+    .section-heading {
+      margin-bottom: 38px;
+    }
+
+    .section-number {
+      color: var(--red);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(25px, 3vw, 34px);
+      line-height: 1.35;
+      font-weight: 800;
+      letter-spacing: -.7px;
+    }
+
+    .section-heading p {
+      color: var(--gray);
+      font-size: 14px;
+      margin-top: 12px;
+      max-width: 650px;
+    }
+
+    /* MARKETS */
+
+    .market-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+    }
+
+    .market-card {
+      border: 1px solid var(--border);
+      padding: 25px 15px;
+      text-align: center;
+      background: white;
+      border-radius: 5px;
+      transition: .25s;
+    }
+
+    .market-card:hover {
+      border-color: var(--red);
+      transform: translateY(-4px);
+    }
+
+    .market-card .market-index {
+      color: var(--red);
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .market-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    /* CUSTOMER */
+
+    .customer-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .customer-card {
+      padding: 27px;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      background: white;
+    }
+
+    .customer-card .card-index {
+      color: var(--red);
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .customer-card h3 {
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .customer-card p {
+      font-size: 13px;
+      color: var(--gray);
+    }
+
+    /* BENEFITS */
+
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0 45px;
+    }
+
+    .benefit-item {
+      display: flex;
+      gap: 18px;
+      padding: 27px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .benefit-icon {
+      width: 43px;
+      height: 43px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--red);
+      background: #fff0f0;
+      border-radius: 5px;
+      font-size: 19px;
+      font-weight: 800;
+    }
+
+    .benefit-item h3 {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .benefit-item p {
+      color: var(--gray);
+      font-size: 13px;
+    }
+
+    /* GOODS */
+
+    .goods-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0 35px;
+    }
+
+    .goods-item {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      padding: 19px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .goods-check {
+      color: var(--red);
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    /* CONDITIONS */
+
+    .condition-wrapper {
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      overflow: hidden;
+      background: white;
+    }
+
+    .condition-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .condition-table th,
+    .condition-table td {
+      text-align: left;
+      padding: 17px 22px;
+      border-bottom: 1px solid var(--border);
+      font-size: 13px;
+    }
+
+    .condition-table th {
+      width: 38%;
+      font-weight: 700;
+      background: #fafafa;
+    }
+
+    .condition-table td {
+      color: #555;
+    }
+
+    .condition-table tr:last-child th,
+    .condition-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .condition-table .highlight {
+      color: var(--red);
+      font-weight: 800;
+    }
+
+    .dim-box {
+      background: var(--navy);
+      color: white;
+      padding: 27px;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+
+    .dim-box h3 {
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+
+    .dim-box p {
+      color: #d4d9e3;
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    .formula {
+      display: inline-block;
+      background: rgba(255,255,255,.1);
+      padding: 12px 17px;
+      border-radius: 4px;
+      font-size: 15px;
+      font-weight: 700;
+      margin: 8px 0 14px;
+    }
+
+    .dim-note {
+      font-size: 12px !important;
+      color: #b9c2d3 !important;
+    }
+
+    /* PROCESS */
+
+    .process-list {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+    }
+
+    .process-item {
+      position: relative;
+      padding: 23px 17px;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      background: white;
+    }
+
+    .process-number {
+      font-size: 27px;
+      color: var(--red);
+      font-weight: 800;
+      margin-bottom: 13px;
+    }
+
+    .process-item h3 {
+      font-size: 14px;
+      margin-bottom: 9px;
+    }
+
+    .process-item p {
+      color: var(--gray);
+      font-size: 12px;
+    }
+
+    /* CTA */
+
+    .cta-section {
+      background: var(--dark);
+      color: white;
+      padding: 75px 0;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(25px, 4vw, 36px);
+      font-weight: 800;
+      margin-bottom: 13px;
+    }
+
+    .cta-section p {
+      color: #ccc;
+      font-size: 14px;
+      max-width: 620px;
+      margin: 0 auto 27px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: var(--navy);
+      color: white;
+      padding: 65px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.1fr;
+      gap: 35px;
+      padding-bottom: 40px;
+    }
+
+    .footer-logo {
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 15px;
+    }
+
+    .footer-logo span {
+      color: #ff4b50;
+    }
+
+    .footer-about p {
+      color: #b9c2d3;
+      font-size: 12px;
+      max-width: 260px;
+    }
+
+    .footer-column h3 {
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .footer-column ul {
+      list-style: none;
+    }
+
+    .footer-column li {
+      margin-bottom: 11px;
+    }
+
+    .footer-column a,
+    .footer-column p {
+      color: #b9c2d3;
+      font-size: 12px;
+      transition: .2s;
+    }
+
+    .footer-column a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.13);
+      padding-top: 22px;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+      color: #9da9bd;
+      font-size: 11px;
+    }
+
+    /* FLOATING CONTACT */
+
+    .floating-contact {
+      position: fixed;
+      right: 22px;
+      bottom: 24px;
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+
+    .float-btn {
+      width: 47px;
+      height: 47px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 3px 14px rgba(0,0,0,.2);
+      transition: .2s;
+      overflow: hidden;
+    }
+
+    .float-btn:hover {
+      transform: translateY(-4px);
+    }
+
+    .float-btn img {
+      width: 23px;
+      height: 23px;
+      object-fit: contain;
+    }
+
+    .float-zalo {
+      background: #0068ff;
+      color: white;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .float-facebook {
+      background: #1877f2;
+    }
+
+    .float-tiktok {
+      background: #000;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+      .nav-links {
+        gap: 14px;
+      }
+
+      .nav-links a {
+        font-size: 11px;
+      }
+
+      .market-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .process-list {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 650px) {
+      .navbar {
+        min-height: 68px;
+      }
+
+      .logo {
+        font-size: 22px;
+      }
+
+      .nav-links li:not(:last-child) {
+        display: none;
+      }
+
+      .nav-contact {
+        padding: 9px 13px;
+        font-size: 11px !important;
+      }
+
+      .hero {
+        padding: 65px 0;
+      }
+
+      .hero-description {
+        font-size: 14px;
+      }
+
+      .section {
+        padding: 62px 0;
+      }
+
+      .market-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .customer-grid,
+      .benefit-grid,
+      .goods-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .process-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .condition-table th,
+      .condition-table td {
+        padding: 13px 12px;
+        font-size: 11px;
+      }
+
+      .condition-table th {
+        width: 42%;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 20px;
+      }
+
+      .footer-about {
+        grid-column: 1 / -1;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+
+      .floating-contact {
+        right: 13px;
+        bottom: 16px;
+      }
+
+      .float-btn {
+        width: 42px;
+        height: 42px;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .process-list {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-tags span {
+        font-size: 11px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container navbar">
+      <a href="index.html" class="logo">TIẾN <span>VANLOG.</span></a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="Express.html">Express</a></li>
+        <li><a href="Vanchuyenbaothue.html">Bao thuế</a></li>
+        <li><a href="Duongbien.html">Đường biển</a></li>
+        <li><a href="#lien-he" class="nav-contact">Liên hệ</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="gioi-thieu">
+    <div class="container">
+      <div class="hero-content">
+        <div class="eyebrow">TIẾN VANLOG · ePacket SERVICE</div>
+
+        <h1>
+          ePacket – Vận chuyển quốc tế
+          <span>hàng nhỏ gọn, bao thuế tận nơi.</span>
+        </h1>
+
+        <p class="hero-description">
+          Dịch vụ vận chuyển quốc tế dành cho các kiện hàng nhỏ gọn,
+          phù hợp với khách hàng cá nhân và các shop kinh doanh online.
+          Hỗ trợ bao thuế nhập khẩu và giao hàng tận địa chỉ người nhận.
+        </p>
+
+        <div class="hero-tags">
+          <span>Hàng nhỏ gọn</span>
+          <span>Bao thuế</span>
+          <span>Giao tận nơi</span>
+        </div>
+
+        <a href="#lien-he" class="btn btn-red">NHẬN TƯ VẤN NGAY →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 MARKETS -->
+  <section class="section" id="thi-truong">
+    <div class="container">
+      <div class="section-heading">
+        <div class="section-number">02 — THỊ TRƯỜNG VẬN CHUYỂN</div>
+        <h2>Kết nối hàng hóa đến nhiều thị trường quốc tế</h2>
+        <p>
+          ePacket hỗ trợ vận chuyển đến các thị trường quốc tế
+          với giải pháp phù hợp cho hàng hóa nhỏ gọn.
+        </p>
+      </div>
+
+      <div class="market-grid">
+        <div class="market-card">
+          <div class="market-index">01</div>
+          <h3>Mỹ (USA)</h3>
+        </div>
+
+        <div class="market-card">
+          <div class="market-index">02</div>
+          <h3>Anh (UK)</h3>
+        </div>
+
+        <div class="market-card">
+          <div class="market-index">03</div>
+          <h3>Canada</h3>
+        </div>
+
+        <div class="market-card">
+          <div class="market-index">04</div>
+          <h3>Úc (Australia)</h3>
+        </div>
+
+        <div class="market-card">
+          <div class="market-index">05</div>
+          <h3>Châu Âu</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 CUSTOMERS -->
+  <section class="section section-light" id="doi-tuong">
+    <div class="container">
+      <div class="section-heading">
+        <div class="section-number">03 — ĐỐI TƯỢNG KHÁCH HÀNG</div>
+        <h2>Giải pháp dành cho nhiều nhu cầu gửi hàng</h2>
+        <p>
+          Phù hợp với cả khách hàng cá nhân và hoạt động kinh doanh online.
+        </p>
+      </div>
+
+      <div class="customer-grid">
+        <div class="customer-card">
+          <div class="card-index">01 / PERSONAL</div>
+          <h3>Khách hàng cá nhân</h3>
+          <p>
+            Có nhu cầu gửi quà tặng, đồ dùng cá nhân và các mặt hàng
+            nhỏ gọn đến người thân ở nước ngoài.
+          </p>
+        </div>
+
+        <div class="customer-card">
+          <div class="card-index">02 / ONLINE SHOP</div>
+          <h3>Shop kinh doanh online</h3>
+          <p>
+            Hỗ trợ các shop có nhu cầu vận chuyển sản phẩm đến
+            khách hàng quốc tế.
+          </p>
+        </div>
+
+        <div class="customer-card">
+          <div class="card-index">03 / E-COMMERCE</div>
+          <h3>Người bán thương mại điện tử</h3>
+          <p>
+            Giải pháp vận chuyển cho người bán hàng có nhu cầu
+            gửi các đơn hàng nhỏ gọn ra nước ngoài.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 BENEFITS -->
+  <section class="section" id="uu-diem">
+    <div class="container">
+      <div class="section-heading">
+        <div class="section-number">04 — ƯU ĐIỂM DỊCH VỤ</div>
+        <h2>Những tiện ích nổi bật của ePacket</h2>
+      </div>
+
+      <div class="benefit-grid">
+        <div class="benefit-item">
+          <div class="benefit-icon">01</div>
+          <div>
+            <h3>Bao thuế nhập khẩu</h3>
+            <p>Đã bao gồm thuế nhập khẩu tại nước đến trong giá dịch vụ.</p>
+          </div>
+        </div>
+
+        <div class="benefit-item">
+          <div class="benefit-icon">02</div>
+          <div>
+            <h3>Door-to-Door</h3>
+            <p>Giao hàng đến địa chỉ người nhận.</p>
+          </div>
+        </div>
+
+        <div class="benefit-item">
+          <div class="benefit-icon">03</div>
+          <div>
+            <h3>Tracking</h3>
+            <p>Cung cấp mã vận đơn cho kiện hàng.</p>
+          </div>
+        </div>
+
+        <div class="benefit-item">
+          <div class="benefit-icon">04</div>
+          <div>
+            <h3>Hàng hóa nhỏ gọn</h3>
+            <p>Phù hợp với kiện hàng có trọng lượng tính cước tối đa 6,5 kg.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 GOODS -->
+  <section class="section section-light" id="hang-hoa">
+    <div class="container">
+      <div class="section-heading">
+        <div class="section-number">05 — HÀNG HÓA PHÙ HỢP</div>
+        <h2>Những mặt hàng có thể gửi qua ePacket</h2>
+        <p>
+          Dịch vụ phù hợp với các mặt hàng thông thường,
+          có kích thước nhỏ gọn và đáp ứng điều kiện tiếp nhận.
+        </p>
+      </div>
+
+      <div class="goods-grid">
+        <div class="goods-item">
+          <span class="goods-check">✓</span>
+          Quần áo và phụ kiện
+        </div>
+
+        <div class="goods-item">
+          <span class="goods-check">✓</span>
+          Đồ dùng cá nhân
+        </div>
+
+        <div class="goods-item">
+          <span class="goods-check">✓</span>
+          Quà tặng
+        </div>
+
+        <div class="goods-item">
+          <span class="goods-check">✓</span>
+          Sản phẩm từ các shop online
+        </div>
+
+        <div class="goods-item">
+          <span class="goods-check">✓</span>
+          Các mặt hàng nhỏ gọn phù hợp với điều kiện tiếp nhận
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 CONDITIONS -->
+  <section class="section" id="dieu-kien">
+    <div class="container">
+      <div class="section-heading">
+        <div class="section-number">06 — ĐIỀU KIỆN TIẾP NHẬN</div>
+        <h2>Quy định về trọng lượng và kích thước</h2>
+        <p>
+          Kiện hàng cần đáp ứng các điều kiện dưới đây để được tiếp nhận
+          và vận chuyển qua dịch vụ ePacket.
+        </p>
+      </div>
+
+      <div class="condition-wrapper">
+        <table class="condition-table">
+          <tbody>
+            <tr>
+              <th>Trọng lượng tính cước tối đa</th>
+              <td class="highlight">6,5 kg/kiện</td>
+            </tr>
+            <tr>
+              <th>Chiều dài tối đa</th>
+              <td>55 cm</td>
+            </tr>
+            <tr>
+              <th>Tổng ba chiều</th>
+              <td>Dài + Rộng + Cao không vượt quá 90 cm</td>
+            </tr>
+            <tr>
+              <th>Kích thước tối thiểu</th>
+              <td>Một cạnh tối thiểu 15 cm, cạnh còn lại tối thiểu 10 cm</td>
+            </tr>
+            <tr>
+              <th>Hệ số DIM</th>
+              <td>Chia 5.000</td>
+            </tr>
+            <tr>
+              <th>Loại hàng</th>
+              <td>Chỉ nhận hàng thường</td>
+            </tr>
+            <tr>
+              <th>Hàng không nhận</th>
+              <td>Thực phẩm, hàng giả, hàng nhái hoặc hàng vi phạm quyền sở hữu thương hiệu</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="dim-box">
+        <h3>Cách tính trọng lượng DIM</h3>
+        <p>Kích thước kiện hàng được tính bằng centimet (cm).</p>
+
+        <div class="formula">
+          DIM = (Dài × Rộng × Cao) / 5.000
+        </div>
+
+        <p>
+          Trọng lượng tính cước được xác định bằng cách lấy giá trị lớn hơn
+          giữa trọng lượng thực tế và trọng lượng DIM.
+        </p>
+
+        <p class="dim-note">
+          Lưu ý: Giới hạn trọng lượng tính cước tối đa là 6,5 kg/kiện.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 PROCESS -->
+  <section class="section section-light" id="quy-trinh">
+    <div class="container">
+      <div class="section-heading">
+        <div class="section-number">07 — QUY TRÌNH VẬN CHUYỂN</div>
+        <h2>Quy trình gửi hàng qua TIẾN VANLOG</h2>
+        <p>
+          Các bước tiếp nhận và xử lý đơn hàng được thực hiện rõ ràng,
+          giúp khách hàng thuận tiện trong quá trình gửi hàng.
+        </p>
+      </div>
+
+      <div class="process-list">
+        <div class="process-item">
+          <div class="process-number">01</div>
+          <h3>Tiếp nhận thông tin</h3>
+          <p>Khách hàng cung cấp thông tin hàng hóa và địa chỉ người nhận.</p>
+        </div>
+
+        <div class="process-item">
+          <div class="process-number">02</div>
+          <h3>Kiểm tra hàng hóa</h3>
+          <p>Kiểm tra loại hàng, trọng lượng và kích thước kiện hàng.</p>
+        </div>
+
+        <div class="process-item">
+          <div class="process-number">03</div>
+          <h3>Tư vấn và báo giá</h3>
+          <p>Tư vấn dịch vụ phù hợp và gửi báo giá.</p>
+        </div>
+
+        <div class="process-item">
+          <div class="process-number">04</div>
+          <h3>Nhận hàng và tracking</h3>
+          <p>Tiếp nhận kiện hàng và cung cấp mã vận đơn.</p>
+        </div>
+
+        <div class="process-item">
+          <div class="process-number">05</div>
+          <h3>Giao hàng tận nơi</h3>
+          <p>Vận chuyển và giao hàng đến địa chỉ người nhận.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 CONTACT -->
+  <section class="cta-section" id="lien-he">
+    <div class="container">
+      <div class="section-number">08 — LIÊN HỆ TƯ VẤN</div>
+      <h2>Bạn đang cần gửi hàng nhỏ gọn đi quốc tế?</h2>
+      <p>
+        Liên hệ TIẾN VANLOG để được tư vấn điều kiện tiếp nhận
+        và báo giá dịch vụ ePacket phù hợp với nhu cầu của bạn.
+      </p>
+
+      <a href="http://zaloapp.com/qr/p/p4z8flbu2vvd"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn btn-red">
+        LIÊN HỆ QUA ZALO →
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-about">
+          <div class="footer-logo">TIẾN <span>VANLOG.</span></div>
+          <p>
+            Giải pháp vận chuyển quốc tế, đồng hành cùng cá nhân
+            và doanh nghiệp trong hoạt động gửi hàng đi nước ngoài.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Dịch vụ</h3>
+          <ul>
+            <li><a href="Express.html">Chuyển phát nhanh Express</a></li>
+            <li><a href="Vanchuyenbaothue.html">Vận chuyển bao thuế</a></li>
+            <li><a href="Duongbien.html">Vận chuyển đường biển</a></li>
+            <li><a href="ePacket.html">Dịch vụ ePacket</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Liên kết</h3>
+          <ul>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="index.html#services">Dịch vụ</a></li>
+            <li><a href="index.html#quote">Nhận báo giá</a></li>
+            <li><a href="#lien-he">Liên hệ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Thông tin liên hệ</h3>
+          <ul>
+            <li><p>Hotline: 0907 268 440</p></li>
+            <li><p>27 Thăng Long, P. Tân Sơn Nhất, TP.HCM</p></li>
+            <li><a href="http://zaloapp.com/qr/p/p4z8flbu2vvd" target="_blank" rel="noopener noreferrer">Zalo tư vấn</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61596860150676" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a href="https://www.tiktok.com/@tien.vanlog" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 TIẾN VANLOG. All rights reserved.</p>
+        <p>Giải pháp vận chuyển quốc tế</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING CONTACT -->
+  <div class="floating-contact">
+
+    <a class="float-btn float-zalo"
+       href="http://zaloapp.com/qr/p/p4z8flbu2vvd"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Liên hệ Zalo">
+      Zalo
+    </a>
+
+    <a class="float-btn float-facebook"
+       href="https://www.facebook.com/profile.php?id=61596860150676"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Facebook">
+      <img src="https://cdn.simpleicons.org/facebook/FFFFFF" alt="Facebook">
+    </a>
+
+    <a class="float-btn float-tiktok"
+       href="https://www.tiktok.com/@tien.vanlog"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="TikTok">
+      <img src="https://cdn.simpleicons.org/tiktok/FFFFFF" alt="TikTok">
+    </a>
+
+  </div>
+
+</body>
+</html>
