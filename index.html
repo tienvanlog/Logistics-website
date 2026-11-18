@@ -258,8 +258,9 @@
 
     .markets-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 14px;
+      width: 100%;
     }
 
     .market-card {
@@ -267,7 +268,10 @@
       border: 1px solid #e9e9e9;
       padding: 24px 22px;
       min-height: 145px;
+      min-width: 0;
+      width: 100%;
       transition: .2s;
+      overflow-wrap: anywhere;
     }
 
     .market-card:hover {
@@ -279,6 +283,26 @@
       font-size: 30px;
       margin-bottom: 11px;
       line-height: 1.2;
+    }
+
+    /* ASEAN FLAG: kích thước cố định, đồng bộ với cờ quốc gia */
+    .market-flag.asean-flag {
+      width: 48px;
+      height: 32px;
+      margin-bottom: 11px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      font-size: 0;
+    }
+
+    .market-flag.asean-flag img {
+      display: block;
+      width: 48px;
+      height: 32px;
+      max-width: 48px;
+      max-height: 32px;
+      object-fit: contain;
     }
 
     .market-number {
@@ -311,6 +335,7 @@
     .asean-trigger {
       display: block;
       width: 100%;
+      min-width: 0;
       min-height: 95px;
       padding: 0;
       border: 0;
@@ -346,6 +371,7 @@
       border: 1px solid var(--line);
       box-shadow: 0 10px 24px rgba(0,0,0,.12);
       z-index: 30;
+      box-sizing: border-box;
     }
 
     .asean-card:hover .asean-menu,
@@ -442,6 +468,7 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
+      min-width: 0;
     }
 
     .field.full { grid-column: 1 / -1; }
@@ -455,6 +482,7 @@
     .field select,
     .field textarea {
       width: 100%;
+      min-width: 0;
       padding: 13px 14px;
       border: 1px solid #ddd;
       border-radius: 4px;
@@ -503,6 +531,7 @@
       border: 1px solid var(--line);
       padding: 18px;
       margin-bottom: 12px;
+      min-width: 0;
     }
 
     .package-item strong {
@@ -513,16 +542,16 @@
 
     .package-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 12px;
     }
 
     .package-grid input {
       width: 100%;
+      min-width: 0;
       padding: 11px;
       border: 1px solid #ddd;
       border-radius: 4px;
-      min-width: 0;
     }
 
     .submit-btn {
@@ -770,12 +799,26 @@
       flex-shrink: 0;
     }
 
-    /* RESPONSIVE */
+    /* TABLET: 2 CỘT THỊ TRƯỜNG CÂN ĐỐI */
 
     @media (max-width: 900px) {
-      .footer-grid { grid-template-columns: repeat(2, 1fr); }
-      .markets-grid { grid-template-columns: repeat(4, 1fr); }
+      .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .markets-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
+      }
+
+      .market-card {
+        min-width: 0;
+        width: 100%;
+        overflow-wrap: anywhere;
+      }
     }
+
+    /* MOBILE */
 
     @media (max-width: 650px) {
       .navbar { min-height: 65px; }
@@ -799,21 +842,47 @@
       .services { grid-template-columns: 1fr; }
 
       .markets-grid {
-        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 10px;
+        width: 100%;
       }
 
       .market-card {
-        padding: 18px;
-        min-height: 130px;
+        box-sizing: border-box;
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        padding: 17px 13px;
+        min-height: 132px;
+        overflow-wrap: anywhere;
       }
 
-      .market-card h3 { font-size: 14px; }
+      .market-card h3 {
+        font-size: 13px;
+        line-height: 1.5;
+        overflow-wrap: anywhere;
+      }
+
+      .market-flag {
+        font-size: 27px;
+      }
+
+      .market-card .market-flag.asean-flag {
+        width: 48px;
+        height: 32px;
+      }
+
+      .market-card .market-flag.asean-flag img {
+        width: 48px;
+        height: 32px;
+      }
+
       .benefits { grid-template-columns: 1fr; }
       .quote-form { padding: 20px; }
       .form-grid { grid-template-columns: 1fr; }
       .field.full { grid-column: auto; }
-      .package-grid { grid-template-columns: repeat(2, 1fr); }
+      .package-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
       .contact-inner {
         flex-direction: column;
@@ -845,10 +914,21 @@
         min-width: 0;
         margin-top: 10px;
         box-shadow: none;
+        box-sizing: border-box;
       }
 
-      .market-card.asean-card {
-        z-index: 5;
+      .asean-trigger {
+        min-width: 0;
+      }
+
+      .asean-menu span {
+        white-space: normal;
+        overflow-wrap: anywhere;
+      }
+
+      html, body {
+        max-width: 100%;
+        overflow-x: hidden;
       }
     }
 
@@ -1028,10 +1108,13 @@
               ">
 
               <div class="market-flag asean-flag">
-  <img
-    src="https://asean.org/wp-content/uploads/2020/10/ASEAN-flag-1.png"
-    alt="Cờ ASEAN">
-</div>
+                <img
+                  src="https://asean.org/wp-content/uploads/2020/10/ASEAN-flag-1.png"
+                  alt="Cờ ASEAN"
+                  width="48"
+                  height="32">
+              </div>
+
               <div class="market-number">09</div>
               <h3>Đông Nam Á (ASEAN)</h3>
               <span class="asean-hint">Xem 7 quốc gia ↓</span>
