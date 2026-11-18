@@ -4,43 +4,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Tìm hiểu dịch vụ chuyển phát nhanh quốc tế Express tại TIẾN VANLOG. Giải pháp vận chuyển dành cho cá nhân và doanh nghiệp.">
+  <meta name="description" content="Dịch vụ Express - Chuyển phát nhanh quốc tế tại TIẾN VANLOG dành cho khách hàng cá nhân và doanh nghiệp.">
   <title>Express - Chuyển phát nhanh quốc tế | TIẾN VANLOG</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --red: #e53935;
+      --red: #d9272e;
+      --red-dark: #b91f27;
       --black: #171717;
-      --gray: #666666;
-      --light: #f6f6f6;
-      --line: #e8e8e8;
-      --navy: #111827;
+      --gray: #666;
+      --light: #f5f5f5;
+      --line: #e7e7e7;
+      --white: #fff;
+      --footer: #0b1730;
     }
 
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Be Vietnam Pro', sans-serif;
+      font-family: "Be Vietnam Pro", sans-serif;
       color: var(--black);
-      background: #ffffff;
+      background: var(--white);
       line-height: 1.7;
     }
 
     a {
-      text-decoration: none;
       color: inherit;
+      text-decoration: none;
     }
 
     .container {
@@ -48,187 +48,197 @@
       margin: auto;
     }
 
-    /* HEADER */
-    header {
-      height: 78px;
-      border-bottom: 1px solid var(--line);
-      display: flex;
-      align-items: center;
-      background: #fff;
+    .top-line {
+      height: 5px;
+      background: var(--red);
     }
 
-    .nav {
+    /* HEADER */
+
+    header {
+      border-bottom: 1px solid var(--line);
+      background: rgba(255,255,255,.97);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar {
+      min-height: 76px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 25px;
     }
 
     .logo {
-      font-size: 23px;
-      font-weight: 800;
-      letter-spacing: -1px;
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: -1.3px;
+      white-space: nowrap;
     }
 
-    .logo span {
+    .logo span,
+    .footer-brand span {
       color: var(--red);
     }
 
-    .nav-links {
+    nav {
       display: flex;
+      gap: 28px;
       align-items: center;
-      gap: 34px;
       font-size: 13px;
-      font-weight: 600;
+      font-weight: 700;
     }
 
-    .nav-links a:hover {
-      color: var(--red);
-    }
+    nav a:hover { color: var(--red); }
 
     .nav-cta {
       background: var(--red);
       color: white;
-      padding: 11px 20px;
-      border-radius: 4px;
-      transition: 0.2s;
+      padding: 11px 18px;
+      border-radius: 5px;
     }
 
     .nav-cta:hover {
-      background: #c62828;
+      background: var(--red-dark);
+      color: white;
     }
 
     /* HERO */
+
     .hero {
-      padding: 100px 0 90px;
-      background: #fafafa;
+      padding: 100px 0;
+      min-height: 490px;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(110deg, #fff 0%, #fff 65%, #fff5f5 100%);
       border-bottom: 1px solid var(--line);
     }
 
     .breadcrumb {
-      font-size: 12px;
       color: #888;
-      margin-bottom: 30px;
+      font-size: 12px;
+      margin-bottom: 28px;
     }
 
-    .breadcrumb a:hover {
-      color: var(--red);
-    }
+    .breadcrumb a:hover { color: var(--red); }
+
+    .hero-content { max-width: 850px; }
 
     .eyebrow {
       color: var(--red);
-      font-size: 12px;
-      font-weight: 800;
+      font-size: 13px;
+      font-weight: 900;
       letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
 
     .hero h1 {
-      max-width: 780px;
-      font-size: clamp(36px, 5vw, 58px);
-      line-height: 1.25;
-      letter-spacing: -2px;
-      font-weight: 800;
-      margin-bottom: 24px;
+      font-size: clamp(40px, 5.5vw, 66px);
+      line-height: 1.18;
+      letter-spacing: -2.5px;
+      font-weight: 900;
+      max-width: 850px;
     }
 
-    .hero h1 span {
-      color: var(--red);
-    }
+    .hero h1 span { color: var(--red); }
 
-    .hero-desc {
-      max-width: 680px;
-      font-size: 16px;
+    .hero-description {
+      margin-top: 24px;
+      max-width: 650px;
       color: var(--gray);
-      margin-bottom: 34px;
+      font-size: 15px;
+      font-weight: 500;
     }
 
     .hero-actions {
       display: flex;
+      gap: 13px;
+      margin-top: 34px;
       flex-wrap: wrap;
-      gap: 14px;
     }
 
     .btn {
-      display: inline-block;
-      padding: 14px 25px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 14px 22px;
+      border-radius: 5px;
       font-size: 13px;
-      font-weight: 700;
-      border-radius: 4px;
-      transition: 0.2s;
+      font-weight: 800;
+      border: 1px solid var(--red);
+      transition: .2s;
     }
 
-    .btn-red {
+    .btn-primary {
       background: var(--red);
       color: white;
     }
 
-    .btn-red:hover {
-      background: #c62828;
-    }
+    .btn-primary:hover { background: var(--red-dark); }
 
     .btn-outline {
-      border: 1px solid #cccccc;
-      color: var(--black);
-    }
-
-    .btn-outline:hover {
-      border-color: var(--red);
       color: var(--red);
+      background: transparent;
     }
 
-    /* SECTION COMMON */
-    section {
-      padding: 90px 0;
-    }
+    .btn-outline:hover { background: #fff0f0; }
 
-    .section-heading {
-      max-width: 700px;
-      margin-bottom: 45px;
-    }
+    /* SECTIONS */
+
+    section { padding: 85px 0; }
+
+    .section-heading { margin-bottom: 40px; }
 
     .section-number {
       color: var(--red);
-      font-size: 12px;
-      font-weight: 800;
+      font-size: 13px;
+      font-weight: 900;
       letter-spacing: 1.5px;
-      margin-bottom: 12px;
+      margin-bottom: 13px;
     }
 
     .section-heading h2 {
-      font-size: clamp(27px, 3.5vw, 38px);
-      line-height: 1.35;
-      letter-spacing: -1px;
-      margin-bottom: 16px;
+      font-size: clamp(29px, 4vw, 42px);
+      font-weight: 900;
+      letter-spacing: -1.4px;
+      line-height: 1.3;
     }
 
     .section-heading p {
       color: var(--gray);
       font-size: 14px;
+      font-weight: 500;
+      margin-top: 12px;
+      max-width: 680px;
     }
 
     /* INTRODUCTION */
+
     .intro-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 70px;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 65px;
       align-items: center;
     }
 
-    .intro-text p {
+    .intro-text > p {
       color: var(--gray);
-      font-size: 15px;
-      margin-bottom: 18px;
+      font-size: 14px;
+      margin-bottom: 17px;
     }
 
     .intro-highlight {
       border-left: 3px solid var(--red);
       padding: 17px 22px;
       background: #fafafa;
-      margin-top: 25px;
-      font-size: 14px;
-      font-weight: 600;
+      margin-top: 24px;
+      font-size: 13px;
+      font-weight: 700;
     }
+
+    /* CARRIER LOGOS */
 
     .carrier-box {
       background: var(--light);
@@ -237,32 +247,55 @@
     }
 
     .carrier-box h3 {
-      font-size: 17px;
+      font-size: 18px;
+      font-weight: 800;
       margin-bottom: 12px;
     }
 
-    .carrier-box p {
+    .carrier-box > p {
       color: var(--gray);
       font-size: 13px;
       margin-bottom: 25px;
     }
 
     .carrier-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
     }
 
     .carrier {
+      height: 82px;
       background: white;
-      padding: 12px 17px;
       border: 1px solid var(--line);
-      border-radius: 4px;
-      font-size: 13px;
-      font-weight: 800;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px;
+      transition: .2s;
     }
 
-    /* AUDIENCE */
+    .carrier:hover {
+      border-color: var(--red);
+      transform: translateY(-3px);
+    }
+
+    .carrier img {
+      display: block;
+      width: 100%;
+      max-width: 105px;
+      height: 45px;
+      object-fit: contain;
+    }
+
+    .carrier.ups-logo img {
+      max-width: 48px;
+      height: 55px;
+    }
+
+    /* SUITABLE CUSTOMERS */
+
     .audience {
       background: var(--light);
     }
@@ -276,9 +309,9 @@
     .audience-card {
       background: white;
       padding: 32px 27px;
-      border: 1px solid #eeeeee;
+      border: 1px solid #eee;
       border-radius: 5px;
-      transition: 0.25s;
+      transition: .25s;
     }
 
     .audience-card:hover {
@@ -289,12 +322,13 @@
     .card-index {
       color: var(--red);
       font-size: 12px;
-      font-weight: 800;
+      font-weight: 900;
       margin-bottom: 25px;
     }
 
     .audience-card h3 {
       font-size: 18px;
+      font-weight: 800;
       margin-bottom: 13px;
     }
 
@@ -304,6 +338,7 @@
     }
 
     /* ADVANTAGES */
+
     .advantages-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -325,13 +360,14 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 19px;
-      font-weight: 800;
+      font-size: 14px;
+      font-weight: 900;
       border-radius: 5px;
     }
 
     .advantage h3 {
       font-size: 16px;
+      font-weight: 800;
       margin-bottom: 7px;
     }
 
@@ -340,10 +376,9 @@
       font-size: 13px;
     }
 
-    /* NOTE */
-    .note-section {
-      padding-top: 0;
-    }
+    /* IMPORT NOTE */
+
+    .note-section { padding-top: 0; }
 
     .note-box {
       background: #fafafa;
@@ -355,6 +390,7 @@
 
     .note-box h3 {
       font-size: 16px;
+      font-weight: 800;
       margin-bottom: 10px;
     }
 
@@ -364,10 +400,11 @@
     }
 
     /* CTA */
+
     .cta {
       background: var(--black);
       color: white;
-      padding: 55px 0;
+      padding: 60px 0;
     }
 
     .cta-inner {
@@ -378,100 +415,179 @@
     }
 
     .cta h2 {
-      font-size: clamp(23px, 3vw, 32px);
+      font-size: clamp(24px, 3vw, 34px);
       line-height: 1.4;
+      font-weight: 900;
       margin-bottom: 10px;
     }
 
     .cta p {
-      color: #bbbbbb;
+      color: #bbb;
       font-size: 13px;
     }
 
-    /* FOOTER */
-    footer {
-      background: var(--navy);
+    .zalo-cta {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      min-width: 205px;
+      padding: 13px 20px;
+      border-radius: 5px;
+      background: var(--red);
       color: white;
-      padding: 55px 0 25px;
+      text-align: center;
+      font-weight: 900;
+      transition: .2s;
+      line-height: 1.6;
+      flex-shrink: 0;
+    }
+
+    .zalo-cta:hover {
+      background: var(--red-dark);
+      transform: translateY(-2px);
+    }
+
+    .zalo-label { font-size: 13px; }
+    .zalo-number { font-size: 15px; }
+
+    /* FOOTER */
+
+    footer {
+      background: var(--footer);
+      color: white;
+      padding: 55px 0 20px;
     }
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr 1fr;
-      gap: 35px;
-      padding-bottom: 40px;
+      grid-template-columns: 1.5fr 1fr 1.25fr 1.25fr;
+      gap: 38px;
+      padding-bottom: 38px;
     }
 
     .footer-brand {
-      font-size: 21px;
-      font-weight: 800;
-      margin-bottom: 15px;
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
     }
 
-    .footer-brand span {
-      color: var(--red);
-    }
-
-    .footer-col p,
-    .footer-col a {
-      font-size: 12px;
-      color: #b7bdc8;
-      line-height: 2;
-    }
-
-    .footer-col h4 {
+    .footer-about {
+      color: #c5ccda;
       font-size: 13px;
-      margin-bottom: 15px;
+      line-height: 1.9;
+      max-width: 340px;
     }
 
-    .footer-col a {
-      display: block;
+    .footer-column h3 {
+      font-size: 15px;
+      font-weight: 800;
+      margin-bottom: 18px;
     }
 
-    .footer-col a:hover {
+    .footer-column ul { list-style: none; }
+
+    .footer-column li {
+      margin-bottom: 10px;
+      color: #c5ccda;
+      font-size: 13px;
+    }
+
+    .footer-column a:hover {
       color: white;
+      text-decoration: underline;
     }
 
-    .copyright {
-      border-top: 1px solid #303949;
-      padding-top: 20px;
-      color: #929baa;
-      font-size: 11px;
-      text-align: center;
+    .footer-contact-line {
+      margin-bottom: 13px;
+      color: #c5ccda;
+      font-size: 13px;
     }
 
-    /* FLOATING CONTACT */
-    .floating-contact {
-      position: fixed;
-      right: 18px;
-      bottom: 28px;
+    .footer-social {
       display: flex;
-      flex-direction: column;
       gap: 10px;
-      z-index: 99;
+      margin-top: 20px;
     }
 
-    .floating-contact a {
-      width: 47px;
-      height: 47px;
+    .footer-social a {
+      width: 35px;
+      height: 35px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
+      background: #243653;
       color: white;
       font-size: 12px;
-      font-weight: 800;
+      font-weight: 900;
+      transition: .2s;
+    }
+
+    .footer-social a:hover { background: var(--red); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.18);
+      padding-top: 18px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      color: #b8c1d1;
+      font-size: 12px;
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-bottom a:hover { color: white; }
+
+    /* FLOATING CONTACT */
+
+    .floating-contact {
+      position: fixed;
+      right: 19px;
+      bottom: 22px;
+      z-index: 99;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .floating-contact a {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      color: white;
+      font-size: 12px;
+      font-weight: 900;
       box-shadow: 0 3px 12px #0002;
-      transition: 0.2s;
+      transition: .2s;
     }
 
     .floating-contact a:hover {
-      transform: scale(1.08);
+      transform: translateY(-3px);
     }
 
-    .zalo { background: #087cf0; }
-    .facebook { background: #1877f2; }
-    .tiktok { background: #111; }
+    .floating-zalo { background: #087cf0; }
+
+    .floating-facebook {
+      background: #1877f2;
+      font-size: 18px !important;
+    }
+
+    .floating-tiktok {
+      background: #000;
+      border: 1px solid #444;
+    }
 
     .floating-contact img {
       width: 21px;
@@ -479,43 +595,66 @@
     }
 
     /* RESPONSIVE */
-    @media (max-width: 768px) {
-      header {
-        height: auto;
-        padding: 18px 0;
+
+    @media (max-width: 900px) {
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      .nav {
-        flex-wrap: wrap;
-        gap: 15px;
+      .intro-grid {
+        gap: 35px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .navbar {
+        min-height: 65px;
       }
 
-      .nav-links {
-        gap: 15px;
+      .logo { font-size: 20px; }
+
+      nav {
+        gap: 12px;
         font-size: 11px;
-        flex-wrap: wrap;
       }
 
-      .nav-cta {
-        padding: 9px 13px;
-      }
+      nav a:not(.nav-cta) { display: none; }
+
+      .nav-cta { padding: 9px 12px; }
 
       .hero {
         padding: 65px 0;
+        min-height: auto;
       }
 
-      section {
-        padding: 65px 0;
+      .hero h1 {
+        font-size: clamp(36px, 10vw, 49px);
+        letter-spacing: -1.5px;
       }
+
+      .hero-description { font-size: 14px; }
+
+      section { padding: 62px 0; }
 
       .intro-grid {
         grid-template-columns: 1fr;
         gap: 30px;
       }
 
-      .audience-grid {
-        grid-template-columns: 1fr;
+      .carrier-box { padding: 25px; }
+
+      .carrier-list { gap: 8px; }
+
+      .carrier {
+        height: 72px;
+        padding: 9px;
       }
+
+      .carrier img { max-height: 38px; }
+
+      .carrier.ups-logo img { max-height: 48px; }
+
+      .audience-grid { grid-template-columns: 1fr; }
 
       .advantages-grid {
         grid-template-columns: 1fr;
@@ -523,338 +662,450 @@
       }
 
       .cta-inner {
-        align-items: flex-start;
         flex-direction: column;
+        align-items: flex-start;
       }
+
+      .zalo-cta { width: 100%; }
 
       .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 20px;
       }
 
-      .note-section {
-        padding-top: 0;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .nav-links {
-        width: 100%;
-        justify-content: space-between;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero h1 {
-        letter-spacing: -1px;
-      }
-
-      .note-box {
-        padding: 22px;
-      }
+      .note-box { padding: 22px; }
 
       .floating-contact {
-        right: 10px;
+        right: 12px;
         bottom: 15px;
       }
 
       .floating-contact a {
-        width: 42px;
-        height: 42px;
+        width: 43px;
+        height: 43px;
       }
+    }
+
+    @media (max-width: 390px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      .carrier-box { padding: 18px; }
     }
   </style>
 </head>
 
 <body>
 
+  <div class="top-line"></div>
+
   <!-- HEADER -->
   <header>
-    <div class="container nav">
-      <a href="index.html" class="logo">TIẾN <span>VANLOG</span></a>
+    <div class="container navbar">
+      <a class="logo" href="index.html">TIẾN VANLOG<span>.</span></a>
 
-      <nav class="nav-links">
+      <nav>
         <a href="index.html">Trang chủ</a>
         <a href="index.html#services">Dịch vụ</a>
         <a href="index.html#markets">Thị trường</a>
-        <a href="index.html#contact" class="nav-cta">Liên hệ</a>
+        <a class="nav-cta" href="index.html#quote">Nhận báo giá</a>
       </nav>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <div class="breadcrumb">
-        <a href="index.html">Trang chủ</a> / Dịch vụ / Express
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html">Trang chủ</a> /
+          <a href="index.html#services">Dịch vụ</a> /
+          Express
+        </div>
+
+        <div class="hero-content">
+          <div class="eyebrow">INTERNATIONAL EXPRESS SHIPPING</div>
+
+          <h1>
+            Express – <span>Chuyển phát nhanh</span> quốc tế
+          </h1>
+
+          <p class="hero-description">
+            Giải pháp vận chuyển quốc tế dành cho cá nhân và doanh nghiệp
+            có nhu cầu gửi hàng hóa ra nước ngoài, ưu tiên tốc độ,
+            khả năng theo dõi và sự thuận tiện trong giao nhận.
+          </p>
+
+          <div class="hero-actions">
+            <a href="index.html#quote" class="btn btn-primary">
+              Yêu cầu báo giá
+            </a>
+
+            <a href="#suitable" class="btn btn-outline">
+              Khám phá dịch vụ
+            </a>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="eyebrow">DỊCH VỤ VẬN CHUYỂN QUỐC TẾ</div>
+    <!-- 01 EXPRESS INTRODUCTION -->
+    <section>
+      <div class="container intro-grid">
 
-      <h1>
-        Express – <span>Chuyển phát nhanh</span> quốc tế
-      </h1>
+        <div class="intro-text">
+          <div class="section-number">01 / EXPRESS LÀ GÌ?</div>
 
-      <p class="hero-desc">
-        Giải pháp vận chuyển quốc tế dành cho cá nhân và doanh nghiệp
-        có nhu cầu gửi hàng hóa ra nước ngoài với tốc độ nhanh,
-        thông tin theo dõi rõ ràng và mạng lưới vận chuyển rộng khắp.
-      </p>
+          <div class="section-heading">
+            <h2>Giải pháp chuyển phát nhanh quốc tế</h2>
+          </div>
 
-      <div class="hero-actions">
-        <a href="index.html#contact" class="btn btn-red">Yêu cầu báo giá</a>
-        <a href="#suitable" class="btn btn-outline">Khám phá dịch vụ</a>
+          <p>
+            Express là dịch vụ chuyển phát nhanh quốc tế, giúp vận chuyển
+            hàng hóa từ Việt Nam đến người nhận tại nhiều quốc gia và
+            vùng lãnh thổ trên thế giới.
+          </p>
+
+          <p>
+            Dịch vụ phù hợp với những nhu cầu cần ưu tiên tốc độ vận chuyển,
+            đồng thời hỗ trợ theo dõi hành trình hàng hóa trong quá trình
+            giao nhận.
+          </p>
+
+          <div class="intro-highlight">
+            TIẾN VANLOG cung cấp dịch vụ Express thông qua các hãng
+            chuyển phát nhanh quốc tế như DHL, FedEx và UPS.
+          </div>
+        </div>
+
+        <!-- CARRIER LOGOS -->
+        <div class="carrier-box">
+          <h3>Mạng lưới vận chuyển</h3>
+
+          <p>
+            Khai thác dịch vụ chuyển phát nhanh quốc tế thông qua
+            các hãng vận chuyển:
+          </p>
+
+          <div class="carrier-list">
+
+            <div class="carrier">
+              <img
+                src="https://cdn.simpleicons.org/dhl/FFCC00"
+                alt="DHL Express"
+                loading="lazy">
+            </div>
+
+            <div class="carrier">
+              <img
+                src="https://cdn.simpleicons.org/fedex/4D148C"
+                alt="FedEx Express"
+                loading="lazy">
+            </div>
+
+            <div class="carrier ups-logo">
+              <img
+                src="https://cdn.simpleicons.org/ups/351C15"
+                alt="UPS"
+                loading="lazy">
+            </div>
+
+          </div>
+        </div>
+
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- EXPRESS INTRODUCTION -->
-  <section>
-    <div class="container intro-grid">
-      <div class="intro-text">
-        <div class="section-number">01 / EXPRESS LÀ GÌ?</div>
+    <!-- 02 SUITABLE CUSTOMERS -->
+    <section class="audience" id="suitable">
+      <div class="container">
 
         <div class="section-heading">
-          <h2>Giải pháp chuyển phát nhanh quốc tế</h2>
-        </div>
+          <div class="section-number">02 / ĐỐI TƯỢNG PHÙ HỢP</div>
 
-        <p>
-          Express là dịch vụ chuyển phát nhanh quốc tế, giúp vận chuyển
-          hàng hóa từ Việt Nam đến người nhận tại nhiều quốc gia và
-          vùng lãnh thổ trên thế giới.
-        </p>
+          <h2>Express phù hợp với ai?</h2>
 
-        <p>
-          Dịch vụ được khai thác thông qua mạng lưới của các hãng
-          chuyển phát nhanh quốc tế, phù hợp với những nhu cầu cần
-          ưu tiên tốc độ và khả năng theo dõi hành trình lô hàng.
-        </p>
-
-        <div class="intro-highlight">
-          TIẾN VANLOG cung cấp dịch vụ Express thông qua các hãng
-          vận chuyển quốc tế như DHL, FedEx và UPS.
-        </div>
-      </div>
-
-      <div class="carrier-box">
-        <h3>Mạng lưới vận chuyển</h3>
-        <p>
-          Khai thác dịch vụ chuyển phát nhanh quốc tế thông qua
-          các hãng vận chuyển:
-        </p>
-
-        <div class="carrier-list">
-          <div class="carrier">DHL</div>
-          <div class="carrier">FedEx</div>
-          <div class="carrier">UPS</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SUITABLE CUSTOMERS -->
-  <section class="audience" id="suitable">
-    <div class="container">
-      <div class="section-heading">
-        <div class="section-number">02 / ĐỐI TƯỢNG PHÙ HỢP</div>
-
-        <h2>Express phù hợp với ai?</h2>
-
-        <p>
-          Dịch vụ đáp ứng nhu cầu vận chuyển quốc tế của nhiều nhóm
-          khách hàng, từ cá nhân đến hoạt động kinh doanh và doanh nghiệp.
-        </p>
-      </div>
-
-      <div class="audience-grid">
-        <div class="audience-card">
-          <div class="card-index">01 — CÁ NHÂN</div>
-          <h3>Khách hàng cá nhân</h3>
           <p>
-            Gửi quà tặng, đồ dùng cá nhân hoặc hàng hóa cho người thân,
-            bạn bè đang sinh sống và làm việc ở nước ngoài.
+            Dịch vụ đáp ứng nhu cầu vận chuyển quốc tế của nhiều nhóm
+            khách hàng, từ cá nhân đến hoạt động kinh doanh và doanh nghiệp.
           </p>
         </div>
 
-        <div class="audience-card">
-          <div class="card-index">02 — KINH DOANH</div>
-          <h3>Cá nhân kinh doanh</h3>
+        <div class="audience-grid">
+
+          <article class="audience-card">
+            <div class="card-index">01 — CÁ NHÂN</div>
+
+            <h3>Khách hàng cá nhân</h3>
+
+            <p>
+              Gửi quà tặng, đồ dùng cá nhân hoặc hàng hóa cho người thân,
+              bạn bè đang sinh sống và làm việc ở nước ngoài.
+            </p>
+          </article>
+
+          <article class="audience-card">
+            <div class="card-index">02 — KINH DOANH</div>
+
+            <h3>Cá nhân kinh doanh</h3>
+
+            <p>
+              Gửi sản phẩm đến khách hàng quốc tế, phục vụ hoạt động
+              bán hàng và kinh doanh xuyên biên giới.
+            </p>
+          </article>
+
+          <article class="audience-card">
+            <div class="card-index">03 — DOANH NGHIỆP</div>
+
+            <h3>Khách hàng doanh nghiệp</h3>
+
+            <p>
+              Gửi chứng từ, hàng mẫu và các lô hàng thương mại
+              đến đối tác hoặc khách hàng quốc tế.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 ADVANTAGES -->
+    <section id="advantages">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="section-number">03 / ƯU ĐIỂM DỊCH VỤ</div>
+
+          <h2>Vì sao nên lựa chọn Express?</h2>
+
           <p>
-            Gửi sản phẩm đến khách hàng quốc tế, phục vụ hoạt động
-            bán hàng và kinh doanh xuyên biên giới.
+            Express là lựa chọn phù hợp khi tốc độ vận chuyển,
+            khả năng theo dõi và sự thuận tiện trong giao nhận
+            là những yếu tố được ưu tiên.
           </p>
         </div>
 
-        <div class="audience-card">
-          <div class="card-index">03 — DOANH NGHIỆP</div>
-          <h3>Khách hàng doanh nghiệp</h3>
+        <div class="advantages-grid">
+
+          <div class="advantage">
+            <div class="advantage-icon">01</div>
+
+            <div>
+              <h3>Tốc độ vận chuyển nhanh</h3>
+
+              <p>
+                Phù hợp với những lô hàng cần được vận chuyển trong
+                thời gian ngắn hơn so với các phương thức vận chuyển
+                thông thường.
+              </p>
+            </div>
+          </div>
+
+          <div class="advantage">
+            <div class="advantage-icon">02</div>
+
+            <div>
+              <h3>Mạng lưới vận chuyển quốc tế</h3>
+
+              <p>
+                Tiếp cận nhiều thị trường quốc tế thông qua mạng lưới
+                của các hãng chuyển phát nhanh.
+              </p>
+            </div>
+          </div>
+
+          <div class="advantage">
+            <div class="advantage-icon">03</div>
+
+            <div>
+              <h3>Theo dõi hành trình hàng hóa</h3>
+
+              <p>
+                Hỗ trợ tracking để người gửi và người nhận cập nhật
+                tình trạng vận chuyển của lô hàng.
+              </p>
+            </div>
+          </div>
+
+          <div class="advantage">
+            <div class="advantage-icon">04</div>
+
+            <div>
+              <h3>Giao nhận thuận tiện</h3>
+
+              <p>
+                Hỗ trợ vận chuyển đến địa chỉ người nhận theo phạm vi
+                phục vụ và điều kiện của từng tuyến dịch vụ.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPORT NOTE -->
+    <section class="note-section">
+      <div class="container">
+
+        <div class="note-box">
+          <h3>Lưu ý về khả năng nhập khẩu tại nước đến</h3>
+
           <p>
-            Gửi chứng từ, hàng mẫu và các lô hàng thương mại
-            cần vận chuyển đến đối tác hoặc khách hàng quốc tế.
+            Người nhận cần đáp ứng các điều kiện nhập khẩu theo quy định
+            của quốc gia nhận hàng. Tại Hoa Kỳ, cá nhân cũng có thể đứng
+            tên nhập khẩu hàng hóa, không nhất thiết phải là doanh nghiệp.
+            Tuy nhiên, hàng hóa vẫn phải tuân thủ các quy định nhập khẩu
+            áp dụng.
           </p>
         </div>
+
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ADVANTAGES -->
-  <section>
-    <div class="container">
-      <div class="section-heading">
-        <div class="section-number">03 / ƯU ĐIỂM DỊCH VỤ</div>
+    <!-- CONTACT CTA -->
+    <section class="cta" id="contact">
+      <div class="container cta-inner">
 
-        <h2>Vì sao nên lựa chọn Express?</h2>
+        <div>
+          <h2>Bạn đang có lô hàng cần vận chuyển?</h2>
 
-        <p>
-          Express là lựa chọn phù hợp khi tốc độ vận chuyển,
-          khả năng theo dõi và sự thuận tiện trong giao nhận
-          là những yếu tố được ưu tiên.
-        </p>
-      </div>
-
-      <div class="advantages-grid">
-        <div class="advantage">
-          <div class="advantage-icon">01</div>
-          <div>
-            <h3>Tốc độ vận chuyển nhanh</h3>
-            <p>
-              Phù hợp với những lô hàng cần được vận chuyển trong
-              thời gian ngắn hơn so với các phương thức vận chuyển
-              thông thường.
-            </p>
-          </div>
+          <p>
+            Liên hệ TIẾN VANLOG để được tư vấn và hỗ trợ báo giá.
+          </p>
         </div>
 
-        <div class="advantage">
-          <div class="advantage-icon">02</div>
-          <div>
-            <h3>Mạng lưới vận chuyển quốc tế</h3>
-            <p>
-              Tiếp cận nhiều thị trường quốc tế thông qua mạng lưới
-              của các hãng chuyển phát nhanh.
-            </p>
-          </div>
-        </div>
+        <a
+          href="http://zaloapp.com/qr/p/p4z8flbu2vvd"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="zalo-cta">
 
-        <div class="advantage">
-          <div class="advantage-icon">03</div>
-          <div>
-            <h3>Theo dõi hành trình hàng hóa</h3>
-            <p>
-              Hỗ trợ tracking để người gửi và người nhận cập nhật
-              tình trạng vận chuyển của lô hàng.
-            </p>
-          </div>
-        </div>
+          <span class="zalo-label">LIÊN HỆ QUA ZALO</span>
+          <span class="zalo-number">0907 268 440</span>
 
-        <div class="advantage">
-          <div class="advantage-icon">04</div>
-          <div>
-            <h3>Giao nhận thuận tiện</h3>
-            <p>
-              Hỗ trợ vận chuyển đến địa chỉ người nhận theo phạm vi
-              phục vụ và điều kiện của từng tuyến dịch vụ.
-            </p>
-          </div>
-        </div>
+        </a>
+
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- IMPORT NOTE -->
-  <section class="note-section">
-    <div class="container">
-      <div class="note-box">
-        <h3>Lưu ý về khả năng nhập khẩu tại nước đến</h3>
-        <p>
-          Người nhận cần đáp ứng các điều kiện nhập khẩu theo quy định
-          của quốc gia nhận hàng. Tại Hoa Kỳ, cá nhân cũng có thể đứng
-          tên nhập khẩu hàng hóa, không nhất thiết phải là doanh nghiệp.
-          Tuy nhiên, hàng hóa vẫn phải tuân thủ các quy định nhập khẩu
-          áp dụng.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta" id="contact">
-    <div class="container cta-inner">
-      <div>
-        <h2>Bạn đang có lô hàng cần vận chuyển?</h2>
-        <p>Liên hệ TIẾN VANLOG để được tư vấn và hỗ trợ báo giá.</p>
-      </div>
-
-      <a href="http://zaloapp.com/qr/p/p4z8flbu2vvd"
-         target="_blank" rel="noopener noreferrer"
-         class="btn btn-red">
-        LIÊN HỆ QUA ZALO<br>
-        0907 268 440
-      </a>
-    </div>
-  </section>
+  </main>
 
   <!-- FOOTER -->
   <footer>
     <div class="container">
+
       <div class="footer-grid">
 
-        <div class="footer-col">
-          <div class="footer-brand">VANLOG <span>EXPRESS</span></div>
-          <p>
+        <div class="footer-column">
+          <div class="footer-brand">
+            VANLOG <span>EXPRESS</span>
+          </div>
+
+          <p class="footer-about">
             Giải pháp vận chuyển quốc tế, đồng hành cùng cá nhân
             và doanh nghiệp trong hoạt động gửi hàng xuyên biên giới.
           </p>
+
+          <div class="footer-social">
+            <a
+              href="https://www.facebook.com/profile.php?id=61596860150676"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook">f</a>
+
+            <a
+              href="http://zaloapp.com/qr/p/p4z8flbu2vvd"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Zalo">Z</a>
+
+            <a
+              href="https://www.tiktok.com/@tien.vanlog"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="TikTok">♪</a>
+          </div>
         </div>
 
-        <div class="footer-col">
-          <h4>Dịch vụ</h4>
-          <a href="express.html">Express</a>
-          <a href="index.html">Vận chuyển bao thuế</a>
-          <a href="index.html">Đường biển</a>
-          <a href="index.html">ePacket</a>
+        <div class="footer-column">
+          <h3>Dịch vụ</h3>
+
+          <ul>
+            <li><a href="Express.html">Express</a></li>
+            <li><a href="index.html#services">Vận chuyển bao thuế</a></li>
+            <li><a href="index.html#services">Đường biển</a></li>
+            <li><a href="index.html#services">ePacket</a></li>
+          </ul>
         </div>
 
-        <div class="footer-col">
-          <h4>Thông tin</h4>
-          <a href="index.html">Giới thiệu</a>
-          <a href="index.html#services">Giải pháp vận chuyển</a>
-          <a href="index.html#contact">Yêu cầu báo giá</a>
+        <div class="footer-column">
+          <h3>Thông tin</h3>
+
+          <ul>
+            <li><a href="index.html">Giới thiệu</a></li>
+            <li><a href="index.html#services">Giải pháp vận chuyển</a></li>
+            <li><a href="index.html#quote">Yêu cầu báo giá</a></li>
+          </ul>
         </div>
 
-        <div class="footer-col">
-          <h4>Liên hệ</h4>
-          <p>Điện thoại: 0907 268 440</p>
-          <p>Địa chỉ: 27 Thăng Long, P. Tân Sơn Nhất, TP.HCM</p>
+        <div class="footer-column">
+          <h3>Liên hệ</h3>
+
+          <div class="footer-contact-line">
+            Điện thoại: 0907 268 440
+          </div>
+
+          <div class="footer-contact-line">
+            Địa chỉ: 27 Thăng Long, P. Tân Sơn Nhất, TP.HCM
+          </div>
         </div>
 
       </div>
 
-      <div class="copyright">
-        © 2026 TIẾN VANLOG. All rights reserved.
+      <div class="footer-bottom">
+        <span>© 2026 TIẾN VANLOG. All rights reserved.</span>
+
+        <div class="footer-bottom-links">
+          <a href="index.html">Trang chủ</a>
+          <a href="index.html#services">Dịch vụ</a>
+          <a href="index.html#quote">Liên hệ</a>
+        </div>
       </div>
+
     </div>
   </footer>
 
-  <!-- FLOATING SOCIAL CONTACT -->
+  <!-- FLOATING SOCIAL BUTTONS -->
   <div class="floating-contact">
-    <a class="zalo"
-       href="http://zaloapp.com/qr/p/p4z8flbu2vvd"
-       target="_blank" rel="noopener noreferrer"
-       aria-label="Zalo">Zalo</a>
 
-    <a class="facebook"
-       href="https://www.facebook.com/profile.php?id=61596860150676"
-       target="_blank" rel="noopener noreferrer"
-       aria-label="Facebook">f</a>
+    <a
+      class="floating-zalo"
+      href="http://zaloapp.com/qr/p/p4z8flbu2vvd"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Zalo">Zalo</a>
 
-    <a class="tiktok"
-       href="https://www.tiktok.com/@tien.vanlog"
-       target="_blank" rel="noopener noreferrer"
-       aria-label="TikTok">
-      <img src="https://cdn.simpleicons.org/tiktok/FFFFFF" alt="TikTok">
+    <a
+      class="floating-facebook"
+      href="https://www.facebook.com/profile.php?id=61596860150676"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Facebook">f</a>
+
+    <a
+      class="floating-tiktok"
+      href="https://www.tiktok.com/@tien.vanlog"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="TikTok">
+
+      <img
+        src="https://cdn.simpleicons.org/tiktok/FFFFFF"
+        alt="TikTok">
+
     </a>
+
   </div>
 
 </body>
