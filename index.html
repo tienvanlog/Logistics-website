@@ -294,6 +294,109 @@
       margin-top: 4px;
     }
 
+    /* ASEAN MARKET DROPDOWN */
+
+    .market-card.asean-card {
+      position: relative;
+      z-index: 1;
+      cursor: pointer;
+    }
+
+    .market-card.asean-card:hover,
+    .market-card.asean-card:focus-within,
+    .market-card.asean-card.is-open {
+      z-index: 20;
+    }
+
+    .asean-trigger {
+      display: block;
+      width: 100%;
+      min-height: 95px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: inherit;
+      font: inherit;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .asean-trigger:focus-visible {
+      outline: 2px solid var(--red);
+      outline-offset: 5px;
+    }
+
+    .asean-hint {
+      display: block;
+      margin-top: 9px;
+      color: var(--red);
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .asean-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 7px);
+      left: 0;
+      width: 100%;
+      min-width: 190px;
+      padding: 7px 0;
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 24px rgba(0,0,0,.12);
+      z-index: 30;
+    }
+
+    .asean-card:hover .asean-menu,
+    .asean-card:focus-within .asean-menu,
+    .asean-card.is-open .asean-menu {
+      display: block;
+    }
+
+    .asean-menu span {
+      display: block;
+      padding: 8px 14px;
+      color: var(--black);
+      font-size: 12px;
+      font-weight: 600;
+      transition: .2s;
+    }
+
+    .asean-menu span:hover {
+      color: var(--red);
+      background: #fff5f5;
+    }
+
+    .market-card.other-market {
+      border-style: dashed;
+    }
+
+    .market-card.other-market .market-flag {
+      color: var(--red);
+      font-weight: 800;
+    }
+
+    .other-market-note {
+      display: block;
+      margin-top: 8px;
+      color: var(--gray);
+      font-size: 11px;
+      font-weight: 500;
+    }
+
+    .other-country-field {
+      display: none;
+    }
+
+    .other-country-field.is-visible {
+      display: flex;
+    }
+
+    .market-select optgroup {
+      font-weight: 800;
+    }
+
     /* BENEFITS */
 
     .benefits {
@@ -694,6 +797,7 @@
       .hero-description { font-size: 14px; }
       section { padding: 62px 0; }
       .services { grid-template-columns: 1fr; }
+
       .markets-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
@@ -733,6 +837,18 @@
       .floating-contact a {
         width: 43px;
         height: 43px;
+      }
+
+      .asean-menu {
+        position: static;
+        width: 100%;
+        min-width: 0;
+        margin-top: 10px;
+        box-shadow: none;
+      }
+
+      .market-card.asean-card {
+        z-index: 5;
       }
     }
 
@@ -797,41 +913,41 @@
         </div>
 
         <div class="services">
-            <a href="Express.html" class="service-card">
+          <a href="Express.html" class="service-card">
             <div class="service-no">01 — EXPRESS</div>
             <h3>Express</h3>
             <p>
               Chuyển phát nhanh quốc tế, phù hợp với những lô hàng
               cần thời gian vận chuyển tối ưu.
             </p>
-         </a>
+          </a>
 
-<a href="Vanchuyenbaothue.html" class="service-card">
-  <div class="service-no">02 — TAX INCLUDED</div>
-  <h3>Vận chuyển bao thuế</h3>
-  <p>
-    Giải pháp vận chuyển hỗ trợ xử lý các khoản thuế nhập khẩu
-    theo điều kiện dịch vụ áp dụng.
-  </p>
-</a>
+          <a href="Vanchuyenbaothue.html" class="service-card">
+            <div class="service-no">02 — TAX INCLUDED</div>
+            <h3>Vận chuyển bao thuế</h3>
+            <p>
+              Giải pháp vận chuyển hỗ trợ xử lý các khoản thuế nhập khẩu
+              theo điều kiện dịch vụ áp dụng.
+            </p>
+          </a>
 
-<a href="Duongbien.html" class="service-card">
-    <div class="service-no">03 — SEA FREIGHT</div>
-    <h3>Đường biển</h3>
-    <p>
-        Giải pháp vận chuyển hàng lẻ quốc tế bằng đường biển,
-        bao gồm thuế nhập khẩu và hỗ trợ thủ tục thông quan.
-    </p>
-</a>
+          <a href="Duongbien.html" class="service-card">
+            <div class="service-no">03 — SEA FREIGHT</div>
+            <h3>Đường biển</h3>
+            <p>
+              Giải pháp vận chuyển hàng lẻ quốc tế bằng đường biển,
+              bao gồm thuế nhập khẩu và hỗ trợ thủ tục thông quan.
+            </p>
+          </a>
 
-<a href="ePacket.html" class="service-card">
-  <div class="service-no">04 — E-COMMERCE</div>
-  <h3>ePacket</h3>
-  <p>
-    Giải pháp vận chuyển cho các lô hàng thương mại điện tử,
-    tùy thuộc vào tuyến và điều kiện tiếp nhận.
-  </p>
-</a>
+          <a href="ePacket.html" class="service-card">
+            <div class="service-no">04 — E-COMMERCE</div>
+            <h3>ePacket</h3>
+            <p>
+              Giải pháp vận chuyển cho các lô hàng thương mại điện tử,
+              tùy thuộc vào tuyến và điều kiện tiếp nhận.
+            </p>
+          </a>
         </div>
       </div>
     </section>
@@ -844,6 +960,8 @@
           <h2>Kết nối hàng hóa, vươn ra thế giới.</h2>
           <p>
             Các thị trường vận chuyển quốc tế được tập trung khai thác.
+            Với những quốc gia chưa có trong danh sách, khách hàng có thể
+            liên hệ để kiểm tra tuyến vận chuyển phù hợp.
           </p>
         </div>
 
@@ -894,6 +1012,46 @@
             <div class="market-flag">🇬🇧</div>
             <div class="market-number">08</div>
             <h3>Vương quốc Anh (UK)</h3>
+          </article>
+
+          <!-- 09 ASEAN -->
+          <article class="market-card asean-card" id="aseanMarketCard">
+            <button
+              class="asean-trigger"
+              type="button"
+              aria-expanded="false"
+              aria-controls="aseanMarketMenu"
+              onclick="
+                const card = this.closest('.asean-card');
+                const isOpen = card.classList.toggle('is-open');
+                this.setAttribute('aria-expanded', String(isOpen));
+              ">
+
+              <div class="market-flag">🌏</div>
+              <div class="market-number">09</div>
+              <h3>Đông Nam Á (ASEAN)</h3>
+              <span class="asean-hint">Xem 7 quốc gia ↓</span>
+            </button>
+
+            <div class="asean-menu" id="aseanMarketMenu">
+              <span>Thái Lan</span>
+              <span>Campuchia</span>
+              <span>Lào</span>
+              <span>Philippines</span>
+              <span>Indonesia</span>
+              <span>Malaysia</span>
+              <span>Singapore</span>
+            </div>
+          </article>
+
+          <!-- 10 OTHER MARKETS -->
+          <article class="market-card other-market">
+            <div class="market-flag">＋</div>
+            <div class="market-number">10</div>
+            <h3>Thị trường khác</h3>
+            <span class="other-market-note">
+              Liên hệ để kiểm tra tuyến vận chuyển.
+            </span>
           </article>
         </div>
       </div>
@@ -955,16 +1113,29 @@
           <div class="form-grid">
             <div class="field">
               <label for="country">Quốc gia / Thị trường nhận hàng *</label>
-              <select id="country" required>
+
+              <select id="country" class="market-select" required>
                 <option value="">Chọn thị trường</option>
-                <option>Hoa Kỳ</option>
-                <option>Canada</option>
-                <option>Úc</option>
-                <option>Châu Âu</option>
-                <option>Nhật Bản</option>
-                <option>Hàn Quốc</option>
-                <option>Đài Loan</option>
-                <option>Vương quốc Anh (UK)</option>
+                <option value="Hoa Kỳ">Hoa Kỳ</option>
+                <option value="Canada">Canada</option>
+                <option value="Úc">Úc</option>
+                <option value="Châu Âu">Châu Âu</option>
+                <option value="Nhật Bản">Nhật Bản</option>
+                <option value="Hàn Quốc">Hàn Quốc</option>
+                <option value="Đài Loan">Đài Loan</option>
+                <option value="Vương quốc Anh (UK)">Vương quốc Anh (UK)</option>
+
+                <optgroup label="Đông Nam Á (ASEAN)">
+                  <option value="Thái Lan">Thái Lan</option>
+                  <option value="Campuchia">Campuchia</option>
+                  <option value="Lào">Lào</option>
+                  <option value="Philippines">Philippines</option>
+                  <option value="Indonesia">Indonesia</option>
+                  <option value="Malaysia">Malaysia</option>
+                  <option value="Singapore">Singapore</option>
+                </optgroup>
+
+                <option value="__other__">Quốc gia khác</option>
               </select>
             </div>
 
@@ -978,6 +1149,16 @@
                 <option>ePacket</option>
                 <option>Chưa xác định - cần tư vấn</option>
               </select>
+            </div>
+
+            <div class="field other-country-field" id="otherCountryField">
+              <label for="otherCountry">Nhập tên quốc gia muốn gửi đến *</label>
+              <input
+                id="otherCountry"
+                type="text"
+                maxlength="100"
+                placeholder="Ví dụ: New Zealand"
+                disabled>
             </div>
 
             <div class="field">
@@ -1232,6 +1413,23 @@
     const formStatus = document.getElementById("formStatus");
     const submitButton = quoteForm.querySelector(".submit-btn");
 
+    const countrySelect = document.getElementById("country");
+    const otherCountryField = document.getElementById("otherCountryField");
+    const otherCountryInput = document.getElementById("otherCountry");
+
+    // Hiện ô nhập tên quốc gia nếu khách chọn "Quốc gia khác".
+    countrySelect.addEventListener("change", () => {
+      const isOther = countrySelect.value === "__other__";
+
+      otherCountryField.classList.toggle("is-visible", isOther);
+      otherCountryInput.disabled = !isOther;
+      otherCountryInput.required = isOther;
+
+      if (!isOther) {
+        otherCountryInput.value = "";
+      }
+    });
+
     // Cập nhật tên và số lượng kiện hàng.
     function updatePackageNames() {
       [...packagesContainer.children].forEach((item, index) => {
@@ -1344,9 +1542,16 @@
         }
       );
 
+      // Xác định thị trường nhận hàng.
+      const selectedMarket = countrySelect.value;
+
+      const marketValue = selectedMarket === "__other__"
+        ? `Quốc gia khác: ${otherCountryInput.value.trim()}`
+        : selectedMarket;
+
       // Chuẩn bị dữ liệu gửi đến Google Sheets.
       const data = {
-        market: document.getElementById("country").value,
+        market: marketValue,
         service: document.getElementById("service").value,
         totalWeight: document.getElementById("weight").value.trim(),
         packageCount: packageDetails.length,
@@ -1398,6 +1603,12 @@
         `;
 
         quantityInput.value = 1;
+
+        otherCountryField.classList.remove("is-visible");
+        otherCountryInput.disabled = true;
+        otherCountryInput.required = false;
+        otherCountryInput.value = "";
+
         updatePackageNames();
 
       } catch (error) {
