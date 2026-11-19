@@ -252,6 +252,22 @@
       font-weight: 500;
     }
 
+    /* SERVICE MORE */
+
+    .service-more {
+      display: inline-block;
+      margin-top: 20px;
+      color: var(--red);
+      font-size: 12px;
+      font-weight: 800;
+      transition: .2s;
+    }
+
+    .service-card:hover .service-more {
+      color: var(--red-dark);
+      transform: translateX(5px);
+    }
+
     /* MARKETS */
 
     .markets-section { background: var(--light); }
@@ -285,7 +301,8 @@
       line-height: 1.2;
     }
 
-    /* ASEAN FLAG: kích thước cố định, đồng bộ với cờ quốc gia */
+    /* ASEAN FLAG */
+
     .market-flag.asean-flag {
       width: 48px;
       height: 32px;
@@ -799,7 +816,7 @@
       flex-shrink: 0;
     }
 
-    /* TABLET: 2 CỘT THỊ TRƯỜNG CÂN ĐỐI */
+    /* TABLET */
 
     @media (max-width: 900px) {
       .footer-grid {
@@ -1000,6 +1017,7 @@
               Chuyển phát nhanh quốc tế, phù hợp với những lô hàng
               cần thời gian vận chuyển tối ưu.
             </p>
+            <span class="service-more">Tìm hiểu thêm →</span>
           </a>
 
           <a href="Vanchuyenbaothue.html" class="service-card">
@@ -1009,6 +1027,7 @@
               Giải pháp vận chuyển hỗ trợ xử lý các khoản thuế nhập khẩu
               theo điều kiện dịch vụ áp dụng.
             </p>
+            <span class="service-more">Tìm hiểu thêm →</span>
           </a>
 
           <a href="Duongbien.html" class="service-card">
@@ -1018,6 +1037,7 @@
               Giải pháp vận chuyển hàng lẻ quốc tế bằng đường biển,
               bao gồm thuế nhập khẩu và hỗ trợ thủ tục thông quan.
             </p>
+            <span class="service-more">Tìm hiểu thêm →</span>
           </a>
 
           <a href="ePacket.html" class="service-card">
@@ -1027,6 +1047,7 @@
               Giải pháp vận chuyển cho các lô hàng thương mại điện tử,
               tùy thuộc vào tuyến và điều kiện tiếp nhận.
             </p>
+            <span class="service-more">Tìm hiểu thêm →</span>
           </a>
         </div>
       </div>
